@@ -21,7 +21,7 @@ const Map = () => {
         height: '355px',
     }
 
-    const onLoad = useCallback(function callback(map) {
+    const onLoad = useCallback(map => {
         // This is just an example of getting and using the map instance!!! don't just blindly copy!
         const bounds = new window.google.maps.LatLngBounds(center)
         map.fitBounds(bounds)
@@ -29,7 +29,7 @@ const Map = () => {
         setMap(map)
     }, [])
 
-    const onUnmount = useCallback(function callback(map) {
+    const onUnmount = useCallback(map => {
         setMap(null)
     }, [])
 
@@ -40,12 +40,7 @@ const Map = () => {
             zoom={15}
             onLoad={onLoad}
             onUnmount={onUnmount}
-        >
-            {/* Child components, such as markers, info windows, etc. */}
-            <></>
-        </GoogleMap>
-    ) : (
-        <></>
-    )
+        />
+    ) : null
 }
 export default Map

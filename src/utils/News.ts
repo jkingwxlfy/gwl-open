@@ -1,6 +1,6 @@
 import news1title from '@/assets/news1title.png'
 import news1preview from '@/assets/news1preview.png'
-import { INews } from '@/models/INews'
+import type { INews } from '@/models/INews'
 
 const NewsData: INews[] = [
     {

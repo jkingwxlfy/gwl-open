@@ -36,7 +36,7 @@ const Header: React.FC = () => {
                 <Link className='header__title' href='/'>
                     <Image
                         src={gwllogo}
-                        alt={'Изображение логотипа компании GWL'}
+                        alt='Изображение логотипа компании GWL'
                     />
                     <div className='header__title-name'>
                         <span>GWL</span> <div>GROUP</div>

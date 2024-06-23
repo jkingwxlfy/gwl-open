@@ -1,8 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import useIsMobile from '@/hooks/useIsMobile'
-import { INews } from '@/models/INews'
+import type { INews } from '@/models/INews'
 
 import NewsData from '@/utils/News'
 
@@ -18,8 +17,7 @@ interface INewsPageProps {
 }
 
 const NewsPage: React.FC<INewsPageProps> = ({ params }) => {
-    const isMobile = useIsMobile()
-    const [currentNews, setCurrentNews] = useState<INews>({} as INews)
+    const [currentNews, setCurrentNews] = useState({} as INews)
 
     useEffect(() => {
         const foundNews = NewsData.filter(item => item.url === params.name)[0]

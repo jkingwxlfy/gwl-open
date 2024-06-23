@@ -4,7 +4,6 @@ import useIsMobile from '@/hooks/useIsMobile'
 import Map from '@/compontents/map/Map'
 
 import footerbg from '@/assets/footerbg.png'
-import map from '@/assets/google map.png'
 import './footer.scss'
 
 const Footer: React.FC = () => {

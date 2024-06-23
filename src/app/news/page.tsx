@@ -1,5 +1,4 @@
 'use client'
-import useIsMobile from '@/hooks/useIsMobile'
 import Link from 'next/link'
 import NewsData from '@/utils/News'
 
@@ -7,7 +6,6 @@ import promo from '@/assets/newspromo.png'
 import './news.scss'
 
 const News: React.FC = () => {
-    const isMobile = useIsMobile()
     return (
         <section className='news'>
             <div
