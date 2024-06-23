@@ -1,0 +1,49 @@
+.contact-border {
+    background-color: #333;
+    height: 88px;
+
+    &__container {
+        display: flex;
+        margin: 0 auto;
+        padding: 20px 0 165px;
+        width: 1110px;
+    }
+
+    &__row {
+        width: 646px;
+        line-height: 150%;
+        color: #fff;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+@media (width <= 800px) {
+    .contact-border {
+        height: 105px;
+
+        &__container {
+            margin: 0 auto;
+            padding: 16px 0;
+            width: 330px;
+            height: 100%;
+        }
+
+        &__row {
+            width: 328px;
+            line-height: 150%;
+            font-size: 12px;
+            font-weight: 400;
+
+            br {
+                display: inline;
+            }
+
+            span {
+                color: rgb(83 198 64);
+            }
+        }
+    }
+}

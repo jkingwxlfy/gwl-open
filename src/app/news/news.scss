@@ -1,0 +1,187 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+@import '../../styles/mixins';
+
+.news {
+    flex: 1;
+
+    &__promo {
+        position: relative;
+        z-index: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 170px;
+        height: 360px;
+        color: rgb(245 245 245);
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: rgba(0 0 0 / 50%);
+            backdrop-filter: blur(3px);
+            width: 100%;
+            height: 100%;
+            content: '';
+            pointer-events: none;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 0 auto;
+            width: 1110px;
+        }
+
+        &-wrapper {
+            display: grid;
+            gap: 16px;
+            width: 386px;
+        }
+
+        &-title {
+            color: rgb(245 245 245);
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        &-description {
+            line-height: 120.48%;
+            color: rgb(245 245 245);
+            font-size: 22px;
+            font-weight: 500;
+
+            span {
+                color: rgb(83 198 64);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding: 80px 0;
+
+        &__container {
+            margin: 0 auto;
+            width: 1110px;
+        }
+
+        &-title {
+            color: rgb(35 35 35);
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-auto-rows: 370px;
+            row-gap: 65px;
+            column-gap: 30px;
+            padding-top: 40px;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 370px;
+                text-decoration: none;
+                color: rgb(35 35 35);
+
+                &-title {
+                    padding-top: 16px;
+                    line-height: 20px;
+                }
+
+                &-image {
+                    border-radius: 4px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    height: 330px;
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 800px) {
+    .news {
+        &__promo {
+            padding-top: 166px;
+            padding-bottom: 40px;
+            height: 285px;
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-description {
+                line-height: 120.48%;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            &-wrapper {
+                width: auto;
+            }
+
+            &__container {
+                display: block;
+                width: 330px;
+            }
+        }
+
+        &__list {
+            padding: 40px 0;
+
+            &__container {
+                width: 330px;
+            }
+
+            &-button {
+                @include green-button;
+
+                display: block;
+                margin: 0 auto;
+                padding: 11px;
+                width: 180px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                padding-bottom: 32px;
+
+                &__item {
+                    display: block;
+                    position: relative;
+                    height: 280px;
+
+                    &-image {
+                        display: block;
+                        width: 328px;
+                        height: 280px;
+                    }
+
+                    &-title {
+                        position: absolute;
+                        bottom: 16px;
+                        left: 10px;
+                        line-height: 150%;
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

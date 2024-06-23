@@ -1,0 +1,12 @@
+.slider {
+    margin: 0 auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 16px;
+    overflow-x: auto;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+}

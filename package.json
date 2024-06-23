@@ -1,0 +1,36 @@
+{
+    "name": "gwl",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@react-google-maps/api": "^2.19.3",
+        "next": "14.2.3",
+        "react": "^18",
+        "react-dom": "^18",
+        "sharp": "^0.33.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "@typescript-eslint/eslint-plugin": "^7.9.0",
+        "@typescript-eslint/parser": "^7.9.0",
+        "eslint": "^8.57.0",
+        "eslint-config-alloy": "^5.1.2",
+        "eslint-config-next": "14.2.3",
+        "eslint-plugin-react": "^7.34.1",
+        "prettier": "3.2.5",
+        "sass": "^1.77.1",
+        "stylelint": "^16.5.0",
+        "stylelint-config-concentric-order": "^5.2.0",
+        "stylelint-config-standard": "^36.0.0",
+        "stylelint-config-standard-scss": "^13.1.0",
+        "typescript": "^5.4.5"
+    }
+}

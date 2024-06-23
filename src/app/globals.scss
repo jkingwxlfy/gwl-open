@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+}
+
+.no-scrollfixed {
+    position: fixed;
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

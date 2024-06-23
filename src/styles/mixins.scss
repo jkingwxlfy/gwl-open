@@ -1,0 +1,38 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@mixin white-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+    border-radius: 2px;
+    background-color: rgb(245 245 245);
+    cursor: pointer;
+    width: 300px;
+    text-decoration: none;
+    color: rgb(83 198 64);
+    font-family: '__Montserrat_b1da2a', '__Montserrat_Fallback_b1da2a';
+
+    &:hover {
+        background-color: rgb(240 240 240 / 90%);
+    }
+}
+
+@mixin green-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+    border-radius: 2px;
+    background-color: rgb(83 198 64);
+    cursor: pointer;
+    width: 300px;
+    text-decoration: none;
+    color: rgb(245 245 245);
+    font-family: '__Montserrat_b1da2a', '__Montserrat_Fallback_b1da2a';
+
+    &:hover {
+        background-color: rgb(83 198 64 / 90%);
+    }
+}

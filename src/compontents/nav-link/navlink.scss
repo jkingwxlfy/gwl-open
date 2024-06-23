@@ -1,0 +1,15 @@
+.nav-link {
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(251 251 251);
+    font-size: 18px;
+
+    &:hover {
+        border-bottom: 2px solid rgb(83 198 64);
+    }
+
+    &.active {
+        border-bottom: 2px solid rgb(83 198 64);
+    }
+}
