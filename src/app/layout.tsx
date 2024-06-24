@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google'
 
 import Header from '@/compontents/header/Header'
 import Footer from '@/compontents/footer/Footer'
+import WhatsApp from '@/compontents/whatsapp/WhatsApp'
 
 import './globals.scss'
 
@@ -25,6 +26,7 @@ export default function RootLayout({
                     <Header />
                     {children}
                     <Footer />
+                    <WhatsApp />
                 </main>
             </body>
         </html>

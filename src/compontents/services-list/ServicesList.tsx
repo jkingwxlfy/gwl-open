@@ -5,6 +5,10 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import useIsMobile from '@/hooks/useIsMobile'
 import Link from 'next/link'
+import type { SingleValue } from 'react-select'
+import type { IOptionsSelect } from '../UI/select/MySelect'
+
+import { MySelect } from '../UI'
 
 import whiteArrowRight from '@/assets/whitearrowright.png'
 import greenArrowRight from '@/assets/green-arrow-right.png'
@@ -13,16 +17,19 @@ import './serviceslist.scss'
 interface IServicesListProps {
     servicesData: IService[]
     listTitle: string
+    selectTitle: string
 }
 
 const ServicesList: React.FC<IServicesListProps> = ({
     servicesData,
     listTitle,
+    selectTitle,
 }) => {
     const [selectedService, setSelectedService] = useState<IService>(
         servicesData[0],
     )
-    const [selectedServiceName, setSelectedServiceName] = useState('')
+    const [selectedServiceName, setSelectedServiceName] =
+        useState<SingleValue<IOptionsSelect>>(null)
     const isMobile = useIsMobile()
 
     const handleServiceClick = (id: number) => {
@@ -34,7 +41,7 @@ const ServicesList: React.FC<IServicesListProps> = ({
 
     useEffect(() => {
         const foundService = servicesData.find(
-            item => item.title === selectedServiceName,
+            item => item.title === selectedServiceName?.value,
         )
         if (foundService) {
             setSelectedService(foundService)
@@ -49,21 +56,12 @@ const ServicesList: React.FC<IServicesListProps> = ({
                 )}
                 <div className='services-list-wrapper'>
                     {isMobile ? (
-                        <select
-                            className='services-list-select'
-                            onChange={e =>
-                                setSelectedServiceName(e.target.value)
-                            }
-                        >
-                            <option value='default' defaultChecked hidden>
-                                Выбрать услугу :
-                            </option>
-                            {servicesData.map(option => (
-                                <option key={option.id} value={option.title}>
-                                    {option.title}
-                                </option>
-                            ))}
-                        </select>
+                        <MySelect
+                            setState={setSelectedServiceName}
+                            state={selectedServiceName}
+                            defaultValue={selectTitle}
+                            options={servicesData}
+                        />
                     ) : (
                         <div className='services-list-items'>
                             {servicesData.map(item => (

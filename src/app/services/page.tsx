@@ -26,6 +26,7 @@ const Services: React.FC = () => {
             <ServicesList
                 servicesData={ServicesData}
                 listTitle='Таможенные услуги'
+                selectTitle='Выбрать услугу : '
             />
         </section>
     )

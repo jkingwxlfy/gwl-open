@@ -26,6 +26,7 @@ const Faq: React.FC = () => {
             <ServicesList
                 servicesData={QuestionsData}
                 listTitle='Часто задаваемые вопросы'
+                selectTitle='Выбрать вопрос : '
             />
         </section>
     )
