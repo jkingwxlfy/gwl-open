@@ -31,16 +31,14 @@ const Header: React.FC = () => {
     }, [isActive])
 
     return (
-        <div className='header'>
+        <div className='header' style={{ zIndex: isActive ? 999 : 6 }}>
             <div className='header__container'>
                 <Link className='header__title' href='/'>
                     <Image
                         src={gwllogo}
                         alt='Изображение логотипа компании GWL'
                     />
-                    <div className='header__title-name'>
-                        <span>GWL</span> <div>GROUP</div>
-                    </div>
+                    <div className='header__title-name'>GROUP</div>
                 </Link>
                 <div className='header__links'>
                     {links.map(item => (

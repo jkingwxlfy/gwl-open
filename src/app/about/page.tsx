@@ -1,6 +1,8 @@
 'use client'
 import Image from 'next/image'
 import useIsMobile from '@/hooks/useIsMobile'
+import Link from 'next/link'
+import type { StaticImageData } from 'next/image'
 
 import ContactsBorder from '@/compontents/contacts-border/ContactsBorder'
 import Slider from '@/compontents/slider/Slider'
@@ -29,6 +31,76 @@ import lftmobile from '@/assets/lftmobile.png'
 import frkmobile from '@/assets/frkmobile.png'
 import qazomobile from '@/assets/qazaomobile.png'
 import './about.scss'
+
+interface IRecommendListItems {
+    id: number
+    document: StaticImageData
+    logo: StaticImageData
+    alt: string
+    altDoc: string
+}
+
+const recommendListItems: IRecommendListItems[] = [
+    {
+        id: 1,
+        document: beelinedoc,
+        logo: beeline,
+        alt: 'Изображение логотипа Билайн',
+        altDoc: 'Изображение документа Билайн',
+    },
+    {
+        id: 2,
+        document: lftdoc,
+        logo: lft,
+        alt: 'Изображение логотипа LFT',
+        altDoc: 'Изображение документа LFT',
+    },
+    {
+        id: 3,
+        document: frkdoc,
+        logo: frk,
+        alt: 'Изображение логотипа FRK',
+        altDoc: 'Изображение документа FRK',
+    },
+    {
+        id: 4,
+        document: qazaqdoc,
+        logo: qazaq,
+        alt: 'Изображение логотипа QAZAO',
+        altDoc: 'Изображение документа QAZAO',
+    },
+]
+
+const recommendListItemsMobile: IRecommendListItems[] = [
+    {
+        id: 1,
+        document: beelinedoc,
+        logo: beelinemobile,
+        alt: 'Изображение логотипа Билайн ',
+        altDoc: 'Изображение документа Билайн',
+    },
+    {
+        id: 2,
+        document: lftdoc,
+        logo: lftmobile,
+        alt: 'Изображение логотипа LFT',
+        altDoc: 'Изображение документа LFT',
+    },
+    {
+        id: 3,
+        document: frkdoc,
+        logo: frkmobile,
+        alt: 'Изображение логотипа FRK',
+        altDoc: 'Изображение документа FRK',
+    },
+    {
+        id: 4,
+        document: qazaqdoc,
+        logo: qazomobile,
+        alt: 'Изображение логотипа QAZAO',
+        altDoc: 'Изображение документа QAZAO',
+    },
+]
 
 const AboutPage: React.FC = () => {
     const isMobile = useIsMobile()
@@ -217,13 +289,12 @@ const AboutPage: React.FC = () => {
                             <div className='about-page__exp-info3'>
                                 <div className='about-page__exp-info3__text'>
                                     <div className='about-page__exp-info3__pointer' />
-                                    В течение нашего 12-летнего пути мы
-                                    стремились к инновациям и совершенствованию
-                                    наших услуг, чтобы соответствовать всем
-                                    Вашим потребностям в сфере таможенного
-                                    регулирования. Мы ценим каждого клиента и
-                                    гарантируем индивидуальный подход к решению
-                                    ваших задач.
+                                    Позвольте нам стать Вашим надежным партнером
+                                    в таможенных вопросах и обеспечить вашему
+                                    бизнесу успешное развитие на мировом рынке.
+                                    Вместе с GWL Group Вы можете быть уверены в
+                                    профессиональном подходе и надежной
+                                    поддержке на каждом этапе вашего пути.
                                 </div>
                                 <Image
                                     className='about-page__exp-info3__image'
@@ -393,54 +464,28 @@ const AboutPage: React.FC = () => {
                                     slider: { width: '190px', height: '245px' },
                                 }}
                             >
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={beelinedoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={beelinemobile}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={lftdoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={lftmobile}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={frkdoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={frkmobile}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={qazaqdoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={qazomobile}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
+                                {recommendListItemsMobile.map(item => (
+                                    <div
+                                        className='about-page__recommend-item'
+                                        key={item.id}
+                                    >
+                                        <Link
+                                            target='_blank'
+                                            href={item.document.src}
+                                        >
+                                            <Image
+                                                className='about-page__recommend-doc'
+                                                src={item.document}
+                                                alt={item.altDoc}
+                                            />
+                                        </Link>
+                                        <Image
+                                            className='about-page__recommend-logo'
+                                            src={item.logo}
+                                            alt={item.alt}
+                                        />
+                                    </div>
+                                ))}
                             </Slider>
                             {/* <button className='about-page__recommend-button'>
                                 Смотреть все
@@ -456,54 +501,28 @@ const AboutPage: React.FC = () => {
                                 Нас рекомендуют :
                             </div>
                             <div className='about-page__recommend-wrapper'>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={beelinedoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={beeline}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={lftdoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={lft}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={frkdoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={frk}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
-                                <div className='about-page__recommend-item'>
-                                    <Image
-                                        className='about-page__recommend-doc'
-                                        src={qazaqdoc}
-                                        alt='Изображение документа Билайн'
-                                    />
-                                    <Image
-                                        className='about-page__recommend-logo'
-                                        src={qazaq}
-                                        alt='Изображение логотипа Билайн'
-                                    />
-                                </div>
+                                {recommendListItems.map(item => (
+                                    <div
+                                        className='about-page__recommend-item'
+                                        key={item.id}
+                                    >
+                                        <Link
+                                            target='_blank'
+                                            href={item.document.src}
+                                        >
+                                            <Image
+                                                className='about-page__recommend-doc'
+                                                src={item.document}
+                                                alt={item.altDoc}
+                                            />
+                                        </Link>
+                                        <Image
+                                            className='about-page__recommend-logo'
+                                            src={item.logo}
+                                            alt={item.alt}
+                                        />
+                                    </div>
+                                ))}
                             </div>
                             {/* <button className='about-page__recommend-button'>
                                 Смотреть все

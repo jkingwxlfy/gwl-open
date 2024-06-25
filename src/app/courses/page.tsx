@@ -9,13 +9,17 @@ import whiteArrowRight from '@/assets/whitearrowright.png'
 import course from '@/assets/course.png'
 import coursecardbg1 from '@/assets/coursecardbg1.png'
 import coursecard1 from '@/assets/coursescard1.png'
-import coursecard2 from '@/assets/coursescard1.png'
+import coursecard2 from '@/assets/coursescard2.png'
 import coursecard3 from '@/assets/coursescard3.png'
+import coursecardphose from '@/assets/cardphone.png'
+import coursecardmedal from '@/assets/cardmedal.png'
+import coursecardspeed from '@/assets/cardspeed.png'
 import coursescardbg2 from '@/assets/coursescardbg2.png'
 import person1 from '@/assets/coursesstaff1.png'
 import person2 from '@/assets/coursesstaff2.png'
 import person3 from '@/assets/coursesstaff3.png'
 import './courses.scss'
+import Link from 'next/link'
 
 const Courses: React.FC = () => {
     const isMobile = useIsMobile()
@@ -71,13 +75,16 @@ const Courses: React.FC = () => {
                                 курса ученики получают Сертификат. <br /> Курс
                                 проходит в г. Алматы
                             </div>
-                            <button className='courses__info-button'>
+                            <Link
+                                className='courses__info-button'
+                                href='https://docs.google.com/forms/d/e/1FAIpQLSf4Z19Q3fjrvdFo7fnDtmxrmaaZYoR158DYiLnnTouhVSmcGQ/viewform'
+                            >
                                 Записаться на курс
                                 <Image
                                     src={whiteArrowRight}
                                     alt='Изображение стрелки'
                                 />
-                            </button>
+                            </Link>
                         </>
                     ) : (
                         <>
@@ -112,13 +119,16 @@ const Courses: React.FC = () => {
                                         Сертификат. <br /> Курс проходит в г.
                                         Алматы
                                     </div>
-                                    <button className='courses__info-button'>
+                                    <Link
+                                        className='courses__info-button'
+                                        href='https://docs.google.com/forms/d/e/1FAIpQLSf4Z19Q3fjrvdFo7fnDtmxrmaaZYoR158DYiLnnTouhVSmcGQ/viewform'
+                                    >
                                         Записаться на курс
                                         <Image
                                             src={whiteArrowRight}
                                             alt='Изображение стрелки'
                                         />
-                                    </button>
+                                    </Link>
                                 </div>
                                 <div className='courses__info-image'>
                                     <Image
@@ -269,17 +279,17 @@ const Courses: React.FC = () => {
                 <div className='courses__cards1__container'>
                     <div className='courses__cards1-wrapper'>
                         <Card
-                            image={coursecard1}
+                            image={coursecardphose}
                             title='Бесплатные консультации'
                             text='В течении месяца мы индвидуально консультируем каждого нашего выпускника по любым вопросам'
                         />
                         <Card
-                            image={coursecard2}
+                            image={coursecardmedal}
                             title='Сертификат об окончании'
                             text='По окончанию курса каждый выпускник получает уникальный сертификат'
                         />
                         <Card
-                            image={coursecard3}
+                            image={coursecardspeed}
                             title='Короткий срок'
                             text='Продолжительность курса -
                             9 рабочих дней. Занятия проходят в рабочие дни с 17-00 до 20-00.'

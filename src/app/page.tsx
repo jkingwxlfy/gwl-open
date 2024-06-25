@@ -58,16 +58,29 @@ const App: React.FC = () => {
                                 alt='Изображение стрелки'
                             />
                         </Link>
-                        {isMobile && (
+                        {isMobile ? (
                             <div className='app__contacts'>
                                 <div>+7 (727) 367 16 67</div>
                                 <div>gwl_group@inbox.ru</div>
+                                <Link href='https://www.instagram.com/gwlgroup/'>
+                                    <Image
+                                        src={instagram}
+                                        alt='Лого инстаграмма'
+                                        className='app__contacts-image'
+                                    />
+                                </Link>
+                            </div>
+                        ) : (
+                            <Link
+                                href='https://www.instagram.com/gwlgroup/'
+                                className='app__contacts-inst'
+                            >
                                 <Image
                                     src={instagram}
                                     alt='Лого инстаграмма'
                                     className='app__contacts-image'
                                 />
-                            </div>
+                            </Link>
                         )}
                     </div>
                 </div>

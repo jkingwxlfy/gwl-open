@@ -1,19 +1,24 @@
 .header {
     position: absolute;
     top: 0;
-    z-index: 9;
     padding-top: 32px;
     width: 100%;
     height: 50px;
 
     &__title {
         display: flex;
-        gap: 8px;
+        gap: 4px;
         align-items: center;
         text-decoration: none;
         color: rgb(251 251 251);
         font-size: 18px;
         font-weight: 600;
+
+        img {
+            display: block;
+            width: 42px;
+            height: 42px;
+        }
 
         span {
             color: rgb(83 198 64);

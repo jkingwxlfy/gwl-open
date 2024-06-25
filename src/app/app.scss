@@ -8,6 +8,11 @@
         gap: 40px;
         align-items: center;
         padding-top: 36px;
+
+        &-inst {
+            display: block;
+            padding-top: 36px;
+        }
     }
 
     &__predescr {
@@ -346,6 +351,7 @@
 
             &__item {
                 display: flex;
+                position: relative;
                 align-items: flex-end;
                 border-radius: 4px;
                 background-position: center;
@@ -358,9 +364,26 @@
                 line-height: 20px;
                 color: #fff;
 
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: inherit;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(0 0 0 / 0%),
+                        rgba(0 0 0 / 75%) 81.588%
+                    );
+                    width: 100%;
+                    height: 50%; /* Adjust as needed */
+                    content: '';
+                    pointer-events: none;
+                }
+
                 &-title {
                     display: -webkit-box;
                     position: relative;
+                    z-index: 999;
                     height: 40px; /* Высота двух строк текста */
                     overflow: hidden;
                     -webkit-line-clamp: 2;
