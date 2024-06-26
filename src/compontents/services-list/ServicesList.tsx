@@ -88,7 +88,11 @@ const ServicesList: React.FC<IServicesListProps> = ({
                         {selectedService.image ? (
                             <Image
                                 className='services-list-info__image'
-                                src={selectedService.image}
+                                src={
+                                    isMobile && selectedService.imageMobile
+                                        ? selectedService.imageMobile
+                                        : selectedService.image
+                                }
                                 alt='Изображение выбранной услуги'
                             />
                         ) : null}
@@ -100,17 +104,10 @@ const ServicesList: React.FC<IServicesListProps> = ({
                         />
                         <Link className='services-list-button' href='/contacts'>
                             Связаться с нами{' '}
-                            {isMobile ? (
-                                <Image
-                                    src={greenArrowRight}
-                                    alt='Изображение стрелки'
-                                />
-                            ) : (
-                                <Image
-                                    src={whiteArrowRight}
-                                    alt='Изображение стрелки'
-                                />
-                            )}
+                            <Image
+                                src={whiteArrowRight}
+                                alt='Изображение стрелки'
+                            />
                         </Link>
                     </div>
                 </div>

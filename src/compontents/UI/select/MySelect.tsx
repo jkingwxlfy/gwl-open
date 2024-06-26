@@ -84,6 +84,7 @@ const MySelect: React.FC<IMySelectProps> = ({
             onChange={newValue => setState(newValue)}
             options={optionsSelect}
             styles={customStyles}
+            isSearchable={false}
         />
     )
 }

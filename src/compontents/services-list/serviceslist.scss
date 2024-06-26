@@ -121,12 +121,12 @@
         }
 
         &-button {
-            @include white-button;
+            @include green-button;
 
             gap: 3px;
             padding: 7.5px;
-            width: 256px;
-            height: 32px;
+            width: 100%;
+            height: 40px;
             font-size: 14px;
         }
 

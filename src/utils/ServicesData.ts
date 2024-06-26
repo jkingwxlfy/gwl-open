@@ -5,8 +5,10 @@ import service2 from '@/assets/service2.png'
 import service3 from '@/assets/services3.png'
 import service4 from '@/assets/services4.png'
 import service5 from '@/assets/services5.png'
+import service6 from '@/assets/services6.png'
 import service7 from '@/assets/services7.png'
 import service8 from '@/assets/services8.png'
+import service8Mobile from '@/assets/service8mobile.png'
 
 const ServicesData: IService[] = [
     {
@@ -334,7 +336,7 @@ const ServicesData: IService[] = [
     },
     {
         id: 6,
-        image: service5,
+        image: service6,
         title: 'Консультирование по сопровождению ВЭД Клиента до и после Таможенного Оформления',
         text: `
         <ul>
@@ -430,7 +432,8 @@ const ServicesData: IService[] = [
     {
         id: 8,
         image: service8,
-        title: 'Грузоперевозки По Казахстану',
+        imageMobile: service8Mobile,
+        title: 'Грузоперевозки По Партнерским соглашениям',
         text: `
         <div>
             Компания “GWL group”, успешно предоставляет не только таможенные услуги, но также услуги по транспортировке грузов внутри города Алматы и по всему Казахстану. Многолетний опыт в области грузоперевозок позволяет сократить сроки доставки груза, поскольку мы все делаем комплексно - таможенные процедуры и логистические услуги.

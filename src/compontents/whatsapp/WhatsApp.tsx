@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import useIsMobile from '@/hooks/useIsMobile'
 
 import logo from '@/assets/whatsapp-icon.png'
 import avatar from '@/assets/whatsapp-avatar.png'
@@ -12,6 +13,11 @@ import './whatsapp.scss'
 const WhatsApp: React.FC = () => {
     const [isActive, setIsActive] = useState(false)
     const [message, setMessage] = useState('')
+    const isMobile = useIsMobile()
+
+    if (isMobile) {
+        return null
+    }
 
     return (
         <div className='whatsapp'>

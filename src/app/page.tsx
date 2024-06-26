@@ -24,6 +24,7 @@ import beelinemobile from '@/assets/beelinemobile.png'
 import ozyurtmobile from '@/assets/ozyrmobile.png'
 import lftmobile from '@/assets/lftmobile.png'
 import kcellmobile from '@/assets/kcellmobile.png'
+import whatsapp from '@/assets/whatsappicon-trans.png'
 import './app.scss'
 
 const App: React.FC = () => {
@@ -37,50 +38,111 @@ const App: React.FC = () => {
             >
                 <div className='app__promo__container'>
                     <div className='app__wrapper'>
-                        <div className='app__info'>
-                            <h1 className='app__title'>GWL GROUP</h1>
-                            <h2 className='app__pretitle'>
-                                Лучший Таможенный представитель
-                            </h2>
-                            <div className='app__description'>
-                                в Республике Казахстан, который расширит границы
-                                Вашего бизнеса до международного уровня!
-                            </div>
-                        </div>
-                        <div className='app__predescr'>
-                            более 12 успешных лет решения задач любых сложностей
-                            наших клиентов
-                        </div>
-                        <Link className='app__button' href='/contacts'>
-                            Связаться с нами{' '}
-                            <Image
-                                src={greenArrowRight}
-                                alt='Изображение стрелки'
-                            />
-                        </Link>
                         {isMobile ? (
-                            <div className='app__contacts'>
-                                <div>+7 (727) 367 16 67</div>
-                                <div>gwl_group@inbox.ru</div>
-                                <Link href='https://www.instagram.com/gwlgroup/'>
+                            <>
+                                <div className='app__info'>
+                                    <h1 className='app__title'>GWL GROUP</h1>
+                                    <h2 className='app__pretitle'>
+                                        Лучший Таможенный представитель
+                                    </h2>
+                                    <div className='app__description'>
+                                        в Республике Казахстан, который расширит
+                                        границы Вашего бизнеса до международного
+                                        уровня!
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className='app__predescr'>
+                                        более 12 успешных лет решения задач
+                                        любых сложностей наших клиентов
+                                    </div>
+                                    <Link
+                                        className='app__button'
+                                        href='/contacts'
+                                    >
+                                        Связаться с нами{' '}
+                                        <Image
+                                            src={greenArrowRight}
+                                            alt='Изображение стрелки'
+                                        />
+                                    </Link>
+                                    <div className='app__contacts'>
+                                        <div>+7 (727) 367 16 67</div>
+                                        <div className='app__contacts-wrapper'>
+                                            <div> gwl_group@inbox.ru </div>
+                                            <div className='app__contacts-links'>
+                                                <Link
+                                                    href='https://www.instagram.com/gwlgroup/'
+                                                    className='app__promo-contacts__item'
+                                                >
+                                                    <Image
+                                                        src={instagram}
+                                                        alt='Иконка инстаграмма'
+                                                        className='app__contacts-image'
+                                                    />
+                                                </Link>
+                                                <Link
+                                                    href='https://wa.me/77077267526'
+                                                    className='app__promo-contacts__item'
+                                                >
+                                                    <Image
+                                                        src={whatsapp}
+                                                        alt='Иконка инстаграмма'
+                                                        className='app__contacts-image'
+                                                    />
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div className='app__info'>
+                                    <h1 className='app__title'>GWL GROUP</h1>
+                                    <h2 className='app__pretitle'>
+                                        Лучший Таможенный представитель
+                                    </h2>
+                                    <div className='app__description'>
+                                        в Республике Казахстан, который расширит
+                                        границы Вашего бизнеса до международного
+                                        уровня!
+                                    </div>
+                                </div>
+                                <div className='app__predescr'>
+                                    более 12 успешных лет решения задач любых
+                                    сложностей наших клиентов
+                                </div>
+                                <Link className='app__button' href='/contacts'>
+                                    Связаться с нами{' '}
                                     <Image
-                                        src={instagram}
-                                        alt='Лого инстаграмма'
-                                        className='app__contacts-image'
+                                        src={greenArrowRight}
+                                        alt='Изображение стрелки'
                                     />
                                 </Link>
-                            </div>
-                        ) : (
-                            <Link
-                                href='https://www.instagram.com/gwlgroup/'
-                                className='app__contacts-inst'
-                            >
-                                <Image
-                                    src={instagram}
-                                    alt='Лого инстаграмма'
-                                    className='app__contacts-image'
-                                />
-                            </Link>
+                                <div className='app__promo-contacts'>
+                                    <Link
+                                        href='https://www.instagram.com/gwlgroup/'
+                                        className='app__promo-contacts__item'
+                                    >
+                                        <Image
+                                            src={instagram}
+                                            alt='Иконка инстаграмма'
+                                            className='app__contacts-image'
+                                        />
+                                    </Link>
+                                    <Link
+                                        href='https://wa.me/77077267526'
+                                        className='app__promo-contacts__item'
+                                    >
+                                        <Image
+                                            src={whatsapp}
+                                            alt='Иконка инстаграмма'
+                                            className='app__contacts-image'
+                                        />
+                                    </Link>
+                                </div>
+                            </>
                         )}
                     </div>
                 </div>

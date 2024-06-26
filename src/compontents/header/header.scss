@@ -7,17 +7,17 @@
 
     &__title {
         display: flex;
-        gap: 4px;
+        gap: 5px;
         align-items: center;
         text-decoration: none;
         color: rgb(251 251 251);
-        font-size: 18px;
+        font-size: 26px;
         font-weight: 600;
 
         img {
             display: block;
-            width: 42px;
-            height: 42px;
+            width: 50px;
+            height: 50px;
         }
 
         span {
@@ -29,6 +29,7 @@
         display: flex;
         gap: 104px;
         align-items: center;
+        justify-content: space-between;
         margin: 0 auto;
         width: 1110px;
     }
@@ -37,7 +38,7 @@
         display: flex;
         gap: 20px;
         align-items: center;
-        width: 850px;
+        height: 100%;
     }
 
     &__burger {
@@ -81,12 +82,12 @@
             align-items: center;
             justify-content: space-between;
             margin: 0 auto;
+            padding-top: 24px;
             width: 330px;
         }
 
         &__title {
             z-index: 1;
-            padding-top: 24px;
             padding-left: 0;
         }
 
@@ -184,9 +185,8 @@
                 align-items: center;
                 z-index: 1;
                 cursor: pointer;
-                padding-top: 26px;
                 color: #fff;
-                font-size: 22px;
+                font-size: 18px;
                 user-select: none;
 
                 span {

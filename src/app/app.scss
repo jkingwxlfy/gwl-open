@@ -78,12 +78,21 @@
         }
 
         &__container {
+            display: flex;
             position: relative;
+            align-items: center;
             z-index: 3;
             margin: 0 auto;
-            padding-top: 215px;
             width: 1110px;
+            height: 100%;
             color: rgb(245 245 245);
+        }
+
+        &-contacts {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            padding-top: 36px;
         }
     }
 
@@ -131,6 +140,13 @@
                     padding-bottom: 32px;
                     text-align: center;
                     line-height: 20px;
+                    font-size: 16px;
+                    font-weight: 400;
+
+                    span {
+                        color: rgb(20 145 0);
+                        font-weight: 600;
+                    }
                 }
 
                 &-title {
@@ -254,18 +270,24 @@
             width: 1110px;
         }
 
+        &-image {
+            order: 1;
+        }
+
         &-info {
+            order: 2;
+
             &__title {
                 position: relative;
                 z-index: 1;
                 margin-top: -80px;
+                padding-bottom: 36px;
                 color: rgb(35 35 35);
                 font-size: 36px;
                 font-weight: 600;
             }
 
             &__pretitle {
-                padding-top: 36px;
                 width: 428px;
                 line-height: 29px;
                 font-size: 24px;
@@ -273,6 +295,7 @@
 
                 span {
                     color: rgb(20 145 0);
+                    font-weight: 600;
                 }
             }
 
@@ -599,13 +622,31 @@
             flex-direction: column;
             gap: 4px;
             align-items: flex-start;
-            margin-bottom: 24px;
-            padding-top: 20px;
             font-size: 12px;
 
+            &-links {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+            }
+
+            &-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            a {
+                display: block;
+                width: 28px;
+                height: 28px;
+            }
+
             &-image {
-                position: absolute;
-                right: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -636,15 +677,23 @@
         }
 
         &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 24px;
             width: 100%;
+            height: 100%;
         }
 
         &__info {
-            padding-bottom: 180px;
+            padding-top: 122px;
+            padding-bottom: 0;
         }
 
         &__promo {
             &__container {
+                display: block;
+                padding-top: 0;
                 width: 330px;
             }
         }

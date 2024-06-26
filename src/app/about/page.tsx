@@ -30,11 +30,16 @@ import beelinemobile from '@/assets/beelinemobile.png'
 import lftmobile from '@/assets/lftmobile.png'
 import frkmobile from '@/assets/frkmobile.png'
 import qazomobile from '@/assets/qazaomobile.png'
+import beelinedocfull from '@/assets/beelinedocfull.png'
+import lftdocfull from '@/assets/lftdocfull.png'
+import frkdocfull from '@/assets/frkdocfull.png'
+import qazaqdocfull from '@/assets/qazaqdocfull.png'
 import './about.scss'
 
 interface IRecommendListItems {
     id: number
     document: StaticImageData
+    fullDoc: StaticImageData
     logo: StaticImageData
     alt: string
     altDoc: string
@@ -44,6 +49,7 @@ const recommendListItems: IRecommendListItems[] = [
     {
         id: 1,
         document: beelinedoc,
+        fullDoc: beelinedocfull,
         logo: beeline,
         alt: 'Изображение логотипа Билайн',
         altDoc: 'Изображение документа Билайн',
@@ -51,6 +57,7 @@ const recommendListItems: IRecommendListItems[] = [
     {
         id: 2,
         document: lftdoc,
+        fullDoc: lftdocfull,
         logo: lft,
         alt: 'Изображение логотипа LFT',
         altDoc: 'Изображение документа LFT',
@@ -58,6 +65,7 @@ const recommendListItems: IRecommendListItems[] = [
     {
         id: 3,
         document: frkdoc,
+        fullDoc: frkdocfull,
         logo: frk,
         alt: 'Изображение логотипа FRK',
         altDoc: 'Изображение документа FRK',
@@ -65,6 +73,7 @@ const recommendListItems: IRecommendListItems[] = [
     {
         id: 4,
         document: qazaqdoc,
+        fullDoc: qazaqdocfull,
         logo: qazaq,
         alt: 'Изображение логотипа QAZAO',
         altDoc: 'Изображение документа QAZAO',
@@ -75,6 +84,7 @@ const recommendListItemsMobile: IRecommendListItems[] = [
     {
         id: 1,
         document: beelinedoc,
+        fullDoc: beelinedocfull,
         logo: beelinemobile,
         alt: 'Изображение логотипа Билайн ',
         altDoc: 'Изображение документа Билайн',
@@ -82,6 +92,7 @@ const recommendListItemsMobile: IRecommendListItems[] = [
     {
         id: 2,
         document: lftdoc,
+        fullDoc: lftdocfull,
         logo: lftmobile,
         alt: 'Изображение логотипа LFT',
         altDoc: 'Изображение документа LFT',
@@ -89,6 +100,7 @@ const recommendListItemsMobile: IRecommendListItems[] = [
     {
         id: 3,
         document: frkdoc,
+        fullDoc: frkdocfull,
         logo: frkmobile,
         alt: 'Изображение логотипа FRK',
         altDoc: 'Изображение документа FRK',
@@ -96,6 +108,7 @@ const recommendListItemsMobile: IRecommendListItems[] = [
     {
         id: 4,
         document: qazaqdoc,
+        fullDoc: qazaqdocfull,
         logo: qazomobile,
         alt: 'Изображение логотипа QAZAO',
         altDoc: 'Изображение документа QAZAO',
@@ -189,12 +202,12 @@ const AboutPage: React.FC = () => {
                                 На рынке РК <br /> <span>12 лет</span>
                             </div>
                             <Image
-                                className='about-page__exp-info__image'
+                                className='about-page__exp-info1__image'
                                 src={exp1}
                                 alt='Фотография сотрудника'
                             />
                             <div className='about-page__exp-info1'>
-                                <div className='about-page__exp-info__text'>
+                                <div className='about-page__exp-info1__text'>
                                     Наша компания имеет более чем 12-летний опыт
                                     в сфере таможенного оформления и
                                     предоставляет высококачественные услуги
@@ -237,10 +250,10 @@ const AboutPage: React.FC = () => {
                                 <div className='about-page__exp-info3__pointer' />
                                 Позвольте нам стать Вашим надежным партнером в
                                 таможенных вопросах и обеспечить вашему бизнесу
-                                успешное развитие на мировом рынке. Вместе с GWL
-                                Group Вы можете быть уверены в профессиональном
-                                подходе и надежной поддержке на каждом этапе
-                                вашего пути.
+                                успешное развитие на мировом рынке. Вместе с{' '}
+                                <span>GWL Group</span> Вы можете быть уверены в
+                                профессиональном подходе и надежной поддержке на
+                                каждом этапе вашего пути.
                             </div>
                         </>
                     ) : (
@@ -249,7 +262,7 @@ const AboutPage: React.FC = () => {
                                 На рынке РК <br /> <span>12 лет</span>
                             </div>
                             <div className='about-page__exp-info1'>
-                                <div className='about-page__exp-info__text'>
+                                <div className='about-page__exp-info1__text'>
                                     Наша компания имеет более чем 12-летний опыт
                                     в сфере таможенного оформления и
                                     предоставляет высококачественные услуги
@@ -264,7 +277,7 @@ const AboutPage: React.FC = () => {
                                     бизнеса.
                                 </div>
                                 <Image
-                                    className='about-page__exp-info__image'
+                                    className='about-page__exp-info1__image'
                                     src={exp1}
                                     alt='Фотография сотрудника'
                                 />
@@ -292,9 +305,10 @@ const AboutPage: React.FC = () => {
                                     Позвольте нам стать Вашим надежным партнером
                                     в таможенных вопросах и обеспечить вашему
                                     бизнесу успешное развитие на мировом рынке.
-                                    Вместе с GWL Group Вы можете быть уверены в
-                                    профессиональном подходе и надежной
-                                    поддержке на каждом этапе вашего пути.
+                                    Вместе с <span>GWL Group</span> Вы можете
+                                    быть уверены в профессиональном подходе и
+                                    надежной поддержке на каждом этапе вашего
+                                    пути.
                                 </div>
                                 <Image
                                     className='about-page__exp-info3__image'
@@ -471,7 +485,7 @@ const AboutPage: React.FC = () => {
                                     >
                                         <Link
                                             target='_blank'
-                                            href={item.document.src}
+                                            href={item.fullDoc.src}
                                         >
                                             <Image
                                                 className='about-page__recommend-doc'
@@ -508,7 +522,7 @@ const AboutPage: React.FC = () => {
                                     >
                                         <Link
                                             target='_blank'
-                                            href={item.document.src}
+                                            href={item.fullDoc.src}
                                         >
                                             <Image
                                                 className='about-page__recommend-doc'

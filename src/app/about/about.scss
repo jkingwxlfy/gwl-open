@@ -194,7 +194,13 @@
 
             &__text {
                 padding-top: 25px;
+                line-height: 20px;
                 font-weight: 500;
+
+                span {
+                    color: rgb(20 145 0);
+                    font-weight: 500;
+                }
             }
         }
 
@@ -209,6 +215,13 @@
                 padding-left: 35px;
                 width: 541px;
                 height: 119px;
+                line-height: 20px;
+                font-weight: 500;
+
+                span {
+                    color: rgb(20 145 0);
+                    font-weight: 500;
+                }
             }
 
             &__pointer {
@@ -232,6 +245,13 @@
                 padding-left: 35px;
                 width: 541px;
                 height: 119px;
+                line-height: 20px;
+                font-weight: 500;
+
+                span {
+                    color: rgb(20 145 0);
+                    font-weight: 500;
+                }
             }
 
             &__pointer {
@@ -604,6 +624,11 @@
                     width: auto;
                     height: auto;
                     font-size: 14px;
+                    font-weight: 400;
+
+                    span {
+                        font-weight: 400;
+                    }
                 }
 
                 &__pointer {
@@ -626,6 +651,7 @@
                     width: auto;
                     height: auto;
                     font-size: 14px;
+                    font-weight: 400;
                 }
 
                 &__pointer {
@@ -633,15 +659,17 @@
                 }
             }
 
-            &-info {
+            &-info1 {
                 &__image {
-                    width: 328px;
+                    display: block;
+                    width: 100%;
                     height: 184px;
                 }
 
                 &__text {
                     padding-top: 32px;
                     font-size: 14px;
+                    font-weight: 400;
                 }
             }
         }
