@@ -1,11 +1,14 @@
 'use client'
 import Link from 'next/link'
 import NewsData from '@/utils/News'
+import useIsMobile from '@/hooks/useIsMobile'
 
 import promo from '@/assets/newspromo.png'
 import './news.scss'
 
 const News: React.FC = () => {
+    const isMobile = useIsMobile()
+
     return (
         <section className='news'>
             <div
@@ -27,23 +30,44 @@ const News: React.FC = () => {
                 <div className='news__list__container'>
                     <div className='news__list-title'>Новости</div>
                     <div className='news__list-list'>
-                        {NewsData.map(item => (
-                            <Link
-                                className='news__list-list__item'
-                                key={item.id}
-                                href={`/news/${item.url}`}
-                            >
-                                <div
-                                    className='news__list-list__item-image'
-                                    style={{
-                                        backgroundImage: `url(${item.imagePreview.src})`,
-                                    }}
-                                />
-                                <div className='news__list-list__item-title'>
-                                    {item.title}
-                                </div>
-                            </Link>
-                        ))}
+                        {isMobile ? (
+                            <>
+                                {NewsData.map(item => (
+                                    <Link
+                                        className='news__list-list__item'
+                                        key={item.id}
+                                        href={`/news/${item.url}`}
+                                        style={{
+                                            backgroundImage: `url(${item.imagePreview.src})`,
+                                        }}
+                                    >
+                                        <div className='news__list-list__item-title'>
+                                            {item.title}
+                                        </div>
+                                    </Link>
+                                ))}
+                            </>
+                        ) : (
+                            <>
+                                {NewsData.map(item => (
+                                    <Link
+                                        className='news__list-list__item'
+                                        key={item.id}
+                                        href={`/news/${item.url}`}
+                                    >
+                                        <div
+                                            className='news__list-list__item-image'
+                                            style={{
+                                                backgroundImage: `url(${item.imagePreview.src})`,
+                                            }}
+                                        />
+                                        <div className='news__list-list__item-title'>
+                                            {item.title}
+                                        </div>
+                                    </Link>
+                                ))}
+                            </>
+                        )}
                     </div>
                     {/* {isMobile ? (
                         <Link className='news__list-button' href='/'>
