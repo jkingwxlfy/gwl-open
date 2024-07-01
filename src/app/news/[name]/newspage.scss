@@ -20,6 +20,26 @@
             color: rgb(35 35 35);
             font-size: 16px;
             font-weight: 400;
+
+            ul {
+                display: grid;
+                list-style: none;
+
+                li {
+                    position: relative; /* Относительное позиционирование для псевдоэлемента */
+                    padding-left: 1em; /* Отступ для маркера */
+                    font-size: 1em; /* Размер текста элементов списка */
+                }
+
+                li::before {
+                    position: absolute;
+                    left: 0;
+                    line-height: 1;
+                    color: black; /* Цвет маркера */
+                    font-size: 1rem; /* Регулируйте размер точки */
+                    content: '\2022'; /* Unicode для круглой точки */
+                }
+            }
         }
 
         &-data {

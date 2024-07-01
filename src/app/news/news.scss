@@ -85,14 +85,22 @@
             &__item {
                 display: flex;
                 flex-direction: column;
+                gap: 16px;
                 justify-content: space-between;
-                height: 370px;
+                height: 380px;
                 text-decoration: none;
                 color: rgb(35 35 35);
 
                 &-title {
-                    padding-top: 16px;
+                    display: -webkit-box;
+                    width: 350px;
+                    max-height: 40px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                     line-height: 20px;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2; /* Обрезаем текст после двух строк */
+                    white-space: normal;
                 }
 
                 &-image {

@@ -44,42 +44,6 @@ const News: React.FC = () => {
                                 </div>
                             </Link>
                         ))}
-                        {/* <div className='news__list-list__item'>
-                            <div
-                                className='news__list-list__item-image'
-                                style={{
-                                    backgroundImage: `url(${decor3.src})`,
-                                }}
-                            />
-                            <div className='news__list-list__item-title'>
-                                Запрет на вывоз с таможенной территории ЕАЭС
-                                семян ...
-                            </div>
-                        </div>
-                        <div className='news__list-list__item'>
-                            <div
-                                className='news__list-list__item-image'
-                                style={{
-                                    backgroundImage: `url(${decor2.src})`,
-                                }}
-                            />
-                            <div className='news__list-list__item-title'>
-                                Законное обжалование результатов таможенных
-                                проверок в ...
-                            </div>
-                        </div>
-                        <div className='news__list-list__item'>
-                            <div
-                                className='news__list-list__item-image'
-                                style={{
-                                    backgroundImage: `url(${decor2.src})`,
-                                }}
-                            />
-                            <div className='news__list-list__item-title'>
-                                Законное обжалование результатов таможенных
-                                проверок в ...
-                            </div>
-                        </div> */}
                     </div>
                     {/* {isMobile ? (
                         <Link className='news__list-button' href='/'>
