@@ -446,7 +446,7 @@ const App: React.FC = () => {
                         <Slider
                             styles={{
                                 inner: { gap: '32px', height: '238px' },
-                                wrapper: { width: '256px' },
+                                wrapper: { width: '330px' }, // change wrapper if you want to wide the view's window
                                 slider: { width: '256px', height: '238px' },
                             }}
                         >
@@ -467,20 +467,41 @@ const App: React.FC = () => {
                         </Slider>
                     ) : (
                         <div className='app__news-list'>
-                            {NewsData.map(item => (
-                                <Link
-                                    className='app__news-list__item'
-                                    href={`/news/${item.url}`}
-                                    key={item.id}
-                                    style={{
-                                        backgroundImage: `url(${item.imagePreview.src})`,
-                                    }}
-                                >
-                                    <div className='app__news-list__item-title'>
-                                        {item.title}
-                                    </div>
-                                </Link>
-                            ))}
+                            {NewsData.length > 3 ? (
+                                <>
+                                    {NewsData.slice(0, NewsData.length - 1).map(
+                                        item => (
+                                            <Link
+                                                className='app__news-list__item'
+                                                href={`/news/${item.url}`}
+                                                key={item.id}
+                                                style={{
+                                                    backgroundImage: `url(${item.imagePreview.src})`,
+                                                }}
+                                            >
+                                                <div className='app__news-list__item-title'>
+                                                    {item.title}
+                                                </div>
+                                            </Link>
+                                        ),
+                                    )}
+                                </>
+                            ) : (
+                                NewsData.map(item => (
+                                    <Link
+                                        className='app__news-list__item'
+                                        href={`/news/${item.url}`}
+                                        key={item.id}
+                                        style={{
+                                            backgroundImage: `url(${item.imagePreview.src})`,
+                                        }}
+                                    >
+                                        <div className='app__news-list__item-title'>
+                                            {item.title}
+                                        </div>
+                                    </Link>
+                                ))
+                            )}
                         </div>
                     )}
                 </div>
