@@ -21,6 +21,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='ru'>
+            <head>
+                <meta
+                    name='google-site-verification'
+                    content='k7_UAJKcEI1lpmC5ws6HKuys6BY0AZevbnbvK8a7wSA'
+                />
+            </head>
             <body className={montserrat.className}>
                 <main className='container'>
                     <Header />

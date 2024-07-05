@@ -31,7 +31,7 @@ const Header: React.FC = () => {
     }, [isActive])
 
     return (
-        <div className='header' style={{ zIndex: isActive ? 999 : 6 }}>
+        <header className='header' style={{ zIndex: isActive ? 999 : 6 }}>
             <div className='header__container'>
                 <Link className='header__title' href='/'>
                     <Image
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 export default Header
