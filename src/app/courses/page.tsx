@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-import useIsMobile from '@/hooks/useIsMobile'
 
 import Card from '@/compontents/card/Card'
 
@@ -20,6 +19,7 @@ import person2 from '@/assets/coursesstaff2.png'
 import person3 from '@/assets/coursesstaff3.png'
 import './courses.scss'
 import Link from 'next/link'
+import useIsMobile from '@/hooks/useIsMobile'
 
 const Courses: React.FC = () => {
     const isMobile = useIsMobile()
@@ -319,7 +319,7 @@ const Courses: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className='courses__staff-person__description'>
-                                        - является заместителем директора ТОО
+                                        является заместителем директора ТОО
                                         &quot;GWL group&quot; и ведущим
                                         специалистом компании по таможенному
                                         оформлению грузов и смежным
@@ -345,16 +345,18 @@ const Courses: React.FC = () => {
                                             className='courses__staff-person__name'
                                             style={{ textAlign: 'right' }}
                                         >
-                                            Тимур Султанович
+                                            Байсалов Азамат
                                         </div>
                                     </div>
                                     <div className='courses__staff-person__description'>
-                                        - Эксперт таможенного дела.Проходил
-                                        службу в таможенных органах СССР и
-                                        Республики Казахстан. Имеет звание
-                                        майора таможенной службы. В настоящее
-                                        время работает в сфере услуг таможенного
-                                        представителя.
+                                        Не только рассказывает о теоретических
+                                        основах, но и приводит примеры из
+                                        реальной практики, что помогает
+                                        студентам лучше понять, как применять
+                                        полученные знания на практике. Кроме
+                                        того, учитель активно использует
+                                        интерактивные методы обучения, такие как
+                                        кейс-стади и симуляции
                                     </div>
                                 </div>
                                 <div className='courses__staff-person'>
@@ -370,10 +372,13 @@ const Courses: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className='courses__staff-person__description'>
-                                        - сотрудник компании ТОО &quot;GWL
-                                        Group&quot;, специалист-практик. Стаж
-                                        работы в области таможенного оформления
-                                        более 5 лет.
+                                        Советник таможенной службы РК,
+                                        специалист-практик. Имеет общирный опыт
+                                        работы в таможенной сфере, а также Он
+                                        всегда открыт для вопросов и готов
+                                        оказать поддержку каждому студенту,
+                                        помогая преодолеть трудности в обучении
+                                        и достигать высоких результатов.
                                     </div>
                                 </div>
                             </>
@@ -413,15 +418,18 @@ const Courses: React.FC = () => {
                                 <div className='courses__staff-person'>
                                     <div className='courses__staff-person__wrapper'>
                                         <div className='courses__staff-person__right-fullname'>
-                                            Тимур Султанович
+                                            Байсалов Азамат
                                         </div>
                                         <div className='courses__staff-person__right-description'>
-                                            Эксперт таможенного дела. <br />{' '}
-                                            Проходил службу в таможенных органах
-                                            СССР и Республики Казахстан. Имеет
-                                            звание майора таможенной службы. В
-                                            настоящее время работает в сфере
-                                            услуг таможенного представителя.
+                                            Не только рассказывает о
+                                            теоретических основах, но и приводит
+                                            примеры из реальной практики, что
+                                            помогает студентам лучше понять, как
+                                            применять полученные знания на
+                                            практике. Кроме того, учитель
+                                            активно использует интерактивные
+                                            методы обучения, такие как
+                                            кейс-стади и симуляции
                                         </div>
                                     </div>
                                     <div>
@@ -445,13 +453,17 @@ const Courses: React.FC = () => {
                                     </div>
                                     <div className='courses__staff-person__wrapper'>
                                         <div className='courses__staff-person__fullname'>
-                                            Ибраева Айдана Нурмухамбетовна
+                                            Качкаев Евгений Николаевич
                                         </div>
                                         <div className='courses__staff-person__description'>
-                                            Сотрудник компании ТОО &quot;GWL
-                                            Group&quot;, специалист-практик.{' '}
-                                            <br /> Стаж работы в области
-                                            таможенного оформления более 5 лет.
+                                            Советник таможенной службы РК,
+                                            специалист-практик. Имеет общирный
+                                            опыт работы в таможенной сфере, а
+                                            также Он всегда открыт для вопросов
+                                            и готов оказать поддержку каждому
+                                            студенту, помогая преодолеть
+                                            трудности в обучении и достигать
+                                            высоких результатов.
                                         </div>
                                     </div>
                                 </div>
