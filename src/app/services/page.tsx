@@ -1,5 +1,5 @@
 import ServicesData from '@/utils/ServicesData'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 import ServicesList from '@/compontents/services-list/ServicesList'
 
