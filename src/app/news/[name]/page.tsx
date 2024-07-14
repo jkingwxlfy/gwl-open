@@ -1,10 +1,6 @@
-'use client'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import type { INews } from '@/models/INews'
-import { redirect } from 'next/navigation'
-
 import NewsData from '@/utils/News'
+import type { Metadata } from 'next'
 
 import promo from '@/assets/newspromo.png'
 
@@ -17,17 +13,18 @@ interface INewsPageProps {
     }
 }
 
-const NewsPage: React.FC<INewsPageProps> = ({ params }) => {
-    const [currentNews, setCurrentNews] = useState({} as INews)
+export function generateMetadata({ params }: INewsPageProps) {
+    const description = NewsData.filter(item => item.url === params.name)[0]
+        .title
 
-    useEffect(() => {
-        const foundNews = NewsData.filter(item => item.url === params.name)[0]
-        if (foundNews) {
-            setCurrentNews(foundNews)
-        } else {
-            redirect('/not-found')
-        }
-    }, [params.name])
+    return {
+        title: 'Новости',
+        description,
+    }
+}
+
+const NewsPage: React.FC<INewsPageProps> = ({ params }) => {
+    const currentNews = NewsData.filter(item => item.url === params.name)[0]
 
     return (
         <section className='news-page'>

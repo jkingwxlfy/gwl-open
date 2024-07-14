@@ -9,6 +9,24 @@
         align-items: center;
         padding-top: 36px;
 
+        &-links {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+        }
+
+        &-wrapper {
+            width: 100%;
+        }
+
+        &-number {
+            display: none;
+        }
+
+        &-email {
+            display: none;
+        }
+
         &-inst {
             display: block;
             padding-top: 36px;
@@ -624,10 +642,19 @@
             align-items: flex-start;
             font-size: 12px;
 
+            &-number {
+                display: block;
+            }
+
+            &-email {
+                display: block;
+            }
+
             &-links {
                 display: flex;
                 gap: 16px;
                 align-items: center;
+                width: auto;
             }
 
             &-wrapper {

@@ -7,6 +7,13 @@
     ],
     "rules": {
         "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/consistent-type-assertions": "warn"
+        "@typescript-eslint/consistent-type-assertions": [
+            "warn",
+            {
+                "assertionStyle": "as",
+                "objectLiteralTypeAssertions": "allow"
+            }
+        ],
+        "react/jsx-no-useless-fragment": "off"
     }
 }

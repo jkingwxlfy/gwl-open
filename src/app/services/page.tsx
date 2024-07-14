@@ -1,4 +1,3 @@
-'use client'
 import ServicesData from '@/utils/ServicesData'
 
 import ServicesList from '@/compontents/services-list/ServicesList'

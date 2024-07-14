@@ -1,35 +1,29 @@
-'use client'
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import Link from 'next/link'
-import useIsMobile from '@/hooks/useIsMobile'
-import NewsData from '@/utils/News'
+import type { Metadata } from 'next'
 
+import HomeDecor from '@/compontents/(home)/home-decor/HomeDecor'
+import HomeCompanies from '@/compontents/(home)/home-companies/HomeCompanies'
+import HomeCourses from '@/compontents/(home)/home-courses/HomeCourses'
+import HomeNews from '@/compontents/(home)/home-news/HomeNews'
 import ContactsBorder from '@/compontents/contacts-border/ContactsBorder'
-import Slider from '@/compontents/slider/Slider'
 
 import promoImage from '@/assets/main-promo.png'
 import greenArrowRight from '@/assets/green-arrow-right.png'
 import whiteArrowRight from '@/assets/whitearrowright.png'
 import instagram from '@/assets/instagram icon.png'
 import years12 from '@/assets/12years.png'
-import decor1 from '@/assets/decor1.png'
-import decor2 from '@/assets/decor2.png'
-import course from '@/assets/course.png'
-import kcell from '@/assets/kcell.png'
-import beeline from '@/assets/beline.png'
-import ozyurt from '@/assets/ozyurt.png'
-import lft from '@/assets/lftt.png'
-import beelinemobile from '@/assets/beelinemobile.png'
-import ozyurtmobile from '@/assets/ozyrmobile.png'
-import lftmobile from '@/assets/lftmobile.png'
-import kcellmobile from '@/assets/kcellmobile.png'
+
 import whatsapp from '@/assets/whatsappicon-trans.png'
 import './app.scss'
 
-const App: React.FC = () => {
-    const isMobile = useIsMobile()
+export const metadata: Metadata = {
+    title: 'GWL Group',
+    description: 'Главная страница GWL Group',
+}
 
+const App: React.FC = () => {
     return (
         <section className='app'>
             <div
@@ -38,112 +32,61 @@ const App: React.FC = () => {
             >
                 <div className='app__promo__container'>
                     <div className='app__wrapper'>
-                        {isMobile ? (
-                            <>
-                                <div className='app__info'>
-                                    <h1 className='app__title'>GWL GROUP</h1>
-                                    <h2 className='app__pretitle'>
-                                        Лучший Таможенный представитель
-                                    </h2>
-                                    <div className='app__description'>
-                                        в Республике Казахстан, который расширит
-                                        границы Вашего бизнеса до международного
-                                        уровня!
+                        <div className='app__info'>
+                            <h1 className='app__title'>GWL GROUP</h1>
+                            <h2 className='app__pretitle'>
+                                Лучший Таможенный представитель
+                            </h2>
+                            <div className='app__description'>
+                                в Республике Казахстан, который расширит границы
+                                Вашего бизнеса до международного уровня!
+                            </div>
+                        </div>
+                        <div>
+                            <div className='app__predescr'>
+                                более 12 успешных лет решения задач любых
+                                сложностей наших клиентов
+                            </div>
+                            <Link className='app__button' href='/contacts'>
+                                Связаться с нами{' '}
+                                <Image
+                                    src={greenArrowRight}
+                                    alt='Изображение стрелки'
+                                />
+                            </Link>
+                            <div className='app__contacts'>
+                                <div className='app__contacts-number'>
+                                    +7 (727) 367 16 67
+                                </div>
+                                <div className='app__contacts-wrapper'>
+                                    <div className='app__contacts-email'>
+                                        gwl_group@inbox.ru
+                                    </div>
+                                    <div className='app__contacts-links'>
+                                        <Link
+                                            href='https://www.instagram.com/gwlgroup/'
+                                            className='app__promo-contacts__item'
+                                        >
+                                            <Image
+                                                src={instagram}
+                                                alt='Иконка инстаграмма'
+                                                className='app__contacts-image'
+                                            />
+                                        </Link>
+                                        <Link
+                                            href='https://wa.me/77077267526'
+                                            className='app__promo-contacts__item'
+                                        >
+                                            <Image
+                                                src={whatsapp}
+                                                alt='Иконка инстаграмма'
+                                                className='app__contacts-image'
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
-                                <div>
-                                    <div className='app__predescr'>
-                                        более 12 успешных лет решения задач
-                                        любых сложностей наших клиентов
-                                    </div>
-                                    <Link
-                                        className='app__button'
-                                        href='/contacts'
-                                    >
-                                        Связаться с нами{' '}
-                                        <Image
-                                            src={greenArrowRight}
-                                            alt='Изображение стрелки'
-                                        />
-                                    </Link>
-                                    <div className='app__contacts'>
-                                        <div>+7 (727) 367 16 67</div>
-                                        <div className='app__contacts-wrapper'>
-                                            <div> gwl_group@inbox.ru </div>
-                                            <div className='app__contacts-links'>
-                                                <Link
-                                                    href='https://www.instagram.com/gwlgroup/'
-                                                    className='app__promo-contacts__item'
-                                                >
-                                                    <Image
-                                                        src={instagram}
-                                                        alt='Иконка инстаграмма'
-                                                        className='app__contacts-image'
-                                                    />
-                                                </Link>
-                                                <Link
-                                                    href='https://wa.me/77077267526'
-                                                    className='app__promo-contacts__item'
-                                                >
-                                                    <Image
-                                                        src={whatsapp}
-                                                        alt='Иконка инстаграмма'
-                                                        className='app__contacts-image'
-                                                    />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <div className='app__info'>
-                                    <h1 className='app__title'>GWL GROUP</h1>
-                                    <h2 className='app__pretitle'>
-                                        Лучший Таможенный представитель
-                                    </h2>
-                                    <div className='app__description'>
-                                        в Республике Казахстан, который расширит
-                                        границы Вашего бизнеса до международного
-                                        уровня!
-                                    </div>
-                                </div>
-                                <div className='app__predescr'>
-                                    более 12 успешных лет решения задач любых
-                                    сложностей наших клиентов
-                                </div>
-                                <Link className='app__button' href='/contacts'>
-                                    Связаться с нами{' '}
-                                    <Image
-                                        src={greenArrowRight}
-                                        alt='Изображение стрелки'
-                                    />
-                                </Link>
-                                <div className='app__promo-contacts'>
-                                    <Link
-                                        href='https://www.instagram.com/gwlgroup/'
-                                        className='app__promo-contacts__item'
-                                    >
-                                        <Image
-                                            src={instagram}
-                                            alt='Иконка инстаграмма'
-                                            className='app__contacts-image'
-                                        />
-                                    </Link>
-                                    <Link
-                                        href='https://wa.me/77077267526'
-                                        className='app__promo-contacts__item'
-                                    >
-                                        <Image
-                                            src={whatsapp}
-                                            alt='Иконка инстаграмма'
-                                            className='app__contacts-image'
-                                        />
-                                    </Link>
-                                </div>
-                            </>
-                        )}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -209,177 +152,13 @@ const App: React.FC = () => {
 
             <div className='app__decor'>
                 <div className='app__decor__container'>
-                    {isMobile ? (
-                        <div className='app__decor-info'>
-                            <div className='app__decor-info__title'>
-                                Таможенное оформление
-                            </div>
-                            <div className='app__decor-images'>
-                                <Image
-                                    className='app__decor-images__image1'
-                                    src={decor1}
-                                    alt='Изображение'
-                                />
-                                <Image
-                                    className='app__decor-images__image2'
-                                    src={decor2}
-                                    alt='Изображение'
-                                />
-                            </div>
-                            <div className='app__decor-info__text'>
-                                Каждый, кто завозит товар в Казахстан или
-                                вывозит его из Казахстана в достаточно большом
-                                количестве - является участником ВЭД, так что
-                                рано или поздно возникнет проблема таможенного
-                                оформления товаров и грузов. <br /> <br /> Если
-                                вы хотите сэкономить свое время и получить свой
-                                груз вовремя, без “приключений” и за разумную
-                                цену, то самым лучшим решением будет доверить
-                                таможенное оформление Вашего груза надежному
-                                таможенному представителю. <br /> <br />{' '}
-                                <span>
-                                    Такому, как компания&nbsp;<p>“GWL Group”</p>
-                                </span>
-                            </div>
-                            <Link href='/contacts'>
-                                Связаться с нами{' '}
-                                <Image
-                                    src={whiteArrowRight}
-                                    alt='Изображение стрелки'
-                                />
-                            </Link>
-                        </div>
-                    ) : (
-                        <>
-                            <div className='app__decor-info'>
-                                <div className='app__decor-info__title'>
-                                    Таможенное оформление
-                                </div>
-                                <div className='app__decor-info__text'>
-                                    Каждый, кто завозит товар в Казахстан или
-                                    вывозит его из Казахстана в достаточно
-                                    большом количестве - является участником
-                                    ВЭД, так что рано или поздно возникнет
-                                    проблема таможенного оформления товаров и
-                                    грузов. <br /> <br /> Если вы хотите
-                                    сэкономить свое время и получить свой груз
-                                    вовремя, без “приключений” и за разумную
-                                    цену, то самым лучшим решением будет
-                                    доверить таможенное оформление Вашего груза
-                                    надежному таможенному представителю. <br />{' '}
-                                    <br />{' '}
-                                    <span>
-                                        Такому, как компания&nbsp;
-                                        <p>“GWL Group”</p>
-                                    </span>
-                                </div>
-                                <Link href='/contacts'>
-                                    Связаться с нами{' '}
-                                    <Image
-                                        src={whiteArrowRight}
-                                        alt='Изображение стрелки'
-                                    />
-                                </Link>
-                            </div>
-                            <div className='app__decor-images'>
-                                <Image
-                                    className='app__decor-images__image1'
-                                    src={decor1}
-                                    alt='Изображение'
-                                />
-                                <Image
-                                    className='app__decor-images__image2'
-                                    src={decor2}
-                                    alt='Изображение'
-                                />
-                            </div>
-                        </>
-                    )}
+                    <HomeDecor />
                 </div>
             </div>
 
             <div className='app__course'>
                 <div className='app__course__container'>
-                    {isMobile ? (
-                        <div className='app__course-info'>
-                            <div className='app__course-info__title'>
-                                Школа Таможенного Брокера
-                            </div>
-                            <div className='app__course-image'>
-                                <Image src={course} alt='Изображение' />
-                            </div>
-                            <div className='app__course-info__pretitle'>
-                                <span>Специалист</span> по Таможенному
-                                Декларированию
-                            </div>
-                            <div className='app__course-info__text'>
-                                Данный курс предназначен для работников
-                                предприятий, занимающихся внешнеэкономической
-                                деятельностью, приемом и поставкой грузов
-                                зарубежным партнерам. В ходе курса участники
-                                знакомятся с таможенным законодательством,
-                                заполняют необходимые таможенные документы,
-                                овладевают навыками взаимоотношений с
-                                таможенными службами. <br /> <br /> Полученные
-                                знания дают возможность самостоятельно, без
-                                посредников, правильно совершать таможенные
-                                операции, значительно ускорять этот пpoцecc,
-                                заявлять таможенную стоимость и код ТН ВЭД, а
-                                также грамотно рассчитывать необходимые
-                                таможенные платежи. <br /> <br /> По окончании
-                                курса ученики получают Сертификат. Курс проходит
-                                в г. Алматы
-                            </div>
-                            <Link href='/courses'>
-                                Подробнее{' '}
-                                <Image
-                                    src={whiteArrowRight}
-                                    alt='Изображение стрелки'
-                                />
-                            </Link>
-                        </div>
-                    ) : (
-                        <>
-                            <div className='app__course-info'>
-                                <div className='app__course-info__title'>
-                                    Школа Таможенного Брокера
-                                </div>
-                                <div className='app__course-info__pretitle'>
-                                    <span>Специалист</span> по Таможенному
-                                    Декларированию
-                                </div>
-                                <div className='app__course-info__text'>
-                                    Данный курс предназначен для работников
-                                    предприятий, занимающихся
-                                    внешнеэкономической деятельностью, приемом и
-                                    поставкой грузов зарубежным партнерам. В
-                                    ходе курса участники знакомятся с таможенным
-                                    законодательством, заполняют необходимые
-                                    таможенные документы, овладевают навыками
-                                    взаимоотношений с таможенными службами.{' '}
-                                    <br /> <br /> Полученные знания дают
-                                    возможность самостоятельно, без посредников,
-                                    правильно совершать таможенные операции,
-                                    значительно ускорять этот пpoцecc, заявлять
-                                    таможенную стоимость и код ТН ВЭД, а также
-                                    грамотно рассчитывать необходимые таможенные
-                                    платежи. <br /> <br /> По окончании курса
-                                    ученики получают Сертификат. Курс проходит в
-                                    г. Алматы
-                                </div>
-                                <Link href='/courses'>
-                                    Подробнее{' '}
-                                    <Image
-                                        src={whiteArrowRight}
-                                        alt='Изображение стрелки'
-                                    />
-                                </Link>
-                            </div>
-                            <div className='app__course-image'>
-                                <Image src={course} alt='Изображение' />
-                            </div>
-                        </>
-                    )}
+                    <HomeCourses />
                 </div>
             </div>
 
@@ -389,52 +168,7 @@ const App: React.FC = () => {
                 <div className='app__trust__container'>
                     <div className='app__trust-title'>Нам доверяют : </div>
                     <div className='app__trust-companies'>
-                        {isMobile ? (
-                            <Slider
-                                styles={{
-                                    inner: { gap: '16px', height: '150px' },
-                                    wrapper: { width: '300px' },
-                                    slider: { width: '150px', height: '150px' },
-                                }}
-                            >
-                                <div className='app__trust-companies__itemslider'>
-                                    <Image
-                                        src={beelinemobile}
-                                        alt='Логотип билайн'
-                                    />
-                                </div>
-                                <div className='app__trust-companies__itemslider'>
-                                    <Image
-                                        src={ozyurtmobile}
-                                        alt='Логотип озурт'
-                                    />
-                                </div>
-                                <div className='app__trust-companies__itemslider'>
-                                    <Image
-                                        src={kcellmobile}
-                                        alt='Логотоип kcell'
-                                    />
-                                </div>
-                                <div className='app__trust-companies__itemslider'>
-                                    <Image src={lftmobile} alt='Логотип lft' />
-                                </div>
-                            </Slider>
-                        ) : (
-                            <div className='app__trust-inner'>
-                                <div className='app__trust-companies__item'>
-                                    <Image src={beeline} alt='Логотип билайн' />
-                                </div>
-                                <div className='app__trust-companies__item'>
-                                    <Image src={ozyurt} alt='Логотип озурт' />
-                                </div>
-                                <div className='app__trust-companies__item'>
-                                    <Image src={kcell} alt='Логотоип kcell' />
-                                </div>
-                                <div className='app__trust-companies__item'>
-                                    <Image src={lft} alt='Логотип lft' />
-                                </div>
-                            </div>
-                        )}
+                        <HomeCompanies />
                     </div>
                 </div>
             </div>
@@ -442,68 +176,7 @@ const App: React.FC = () => {
             <div className='app__news'>
                 <div className='app__news__container'>
                     <div className='app__news-title'>Таможенные новости РК</div>
-                    {isMobile ? (
-                        <Slider
-                            styles={{
-                                inner: { gap: '32px', height: '238px' },
-                                wrapper: { width: '330px' }, // change wrapper if you want to wide the view's window
-                                slider: { width: '256px', height: '238px' },
-                            }}
-                        >
-                            {NewsData.map(item => (
-                                <Link
-                                    className='app__news-list__item'
-                                    href={`/news/${item.url}`}
-                                    key={item.id}
-                                    style={{
-                                        backgroundImage: `url(${item.imagePreview.src})`,
-                                    }}
-                                >
-                                    <div className='app__news-list__item-title'>
-                                        {item.title}
-                                    </div>
-                                </Link>
-                            ))}
-                        </Slider>
-                    ) : (
-                        <div className='app__news-list'>
-                            {NewsData.length > 3 ? (
-                                <>
-                                    {NewsData.slice(0, NewsData.length - 1).map(
-                                        item => (
-                                            <Link
-                                                className='app__news-list__item'
-                                                href={`/news/${item.url}`}
-                                                key={item.id}
-                                                style={{
-                                                    backgroundImage: `url(${item.imagePreview.src})`,
-                                                }}
-                                            >
-                                                <div className='app__news-list__item-title'>
-                                                    {item.title}
-                                                </div>
-                                            </Link>
-                                        ),
-                                    )}
-                                </>
-                            ) : (
-                                NewsData.map(item => (
-                                    <Link
-                                        className='app__news-list__item'
-                                        href={`/news/${item.url}`}
-                                        key={item.id}
-                                        style={{
-                                            backgroundImage: `url(${item.imagePreview.src})`,
-                                        }}
-                                    >
-                                        <div className='app__news-list__item-title'>
-                                            {item.title}
-                                        </div>
-                                    </Link>
-                                ))
-                            )}
-                        </div>
-                    )}
+                    <HomeNews />
                 </div>
             </div>
         </section>

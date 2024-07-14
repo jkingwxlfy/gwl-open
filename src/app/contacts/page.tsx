@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
+
 import promo from '@/assets/contactspromo.png'
 import map from '@/assets/contactmap.png'
 import './contacts.scss'
+
+export const metadata: Metadata = {
+    title: 'Контакты',
+    description:
+        'Наши контактные данные свяжитесь с нами и начните расширять Ваш бизнес!',
+}
 
 const Contacts: React.FC = () => {
     return (

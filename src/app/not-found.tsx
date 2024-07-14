@@ -1,11 +1,16 @@
-'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 import arrow from '@/assets/whitearrowright.png'
 import background from '@/assets/bg404.png'
 import promo from '@/assets/promo404.png'
 import './not-found.scss'
+
+export const metadata: Metadata = {
+    title: 'Страница не найдена',
+    description: 'К сожалению, такой страницы не существует',
+}
 
 const NotFound: React.FC = () => {
     return (

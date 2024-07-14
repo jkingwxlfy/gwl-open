@@ -1,11 +1,10 @@
-'use client'
-import Image from 'next/image'
+import type { Metadata } from 'next'
 
+import CoursesStaff from '@/compontents/(courses)/courses-staff/CoursesStaff'
+import CoursesInfo from '@/compontents/(courses)/courses-info/CoursesInfo'
 import Card from '@/compontents/card/Card'
 
 import promo from '@/assets/coursespromo.png'
-import whiteArrowRight from '@/assets/whitearrowright.png'
-import course from '@/assets/course.png'
 import coursecardbg1 from '@/assets/coursecardbg1.png'
 import coursecard1 from '@/assets/coursescard1.png'
 import coursecard2 from '@/assets/coursescard2.png'
@@ -14,16 +13,16 @@ import coursecardphose from '@/assets/cardphone.png'
 import coursecardmedal from '@/assets/cardmedal.png'
 import coursecardspeed from '@/assets/cardspeed.png'
 import coursescardbg2 from '@/assets/coursescardbg2.png'
-import person1 from '@/assets/coursesstaff1.png'
-import person2 from '@/assets/coursesstaff2.png'
-import person3 from '@/assets/coursesstaff3.png'
+
 import './courses.scss'
-import Link from 'next/link'
-import useIsMobile from '@/hooks/useIsMobile'
+
+export const metadata: Metadata = {
+    title: 'Курсы',
+    description:
+        'Школа Таможенного Брокера в Алматы от лучших специалистов компании',
+}
 
 const Courses: React.FC = () => {
-    const isMobile = useIsMobile()
-
     return (
         <section className='courses'>
             <div
@@ -45,100 +44,7 @@ const Courses: React.FC = () => {
 
             <div className='courses__info'>
                 <div className='courses__info__container'>
-                    {isMobile ? (
-                        <>
-                            <div className='courses__info-title'>
-                                Школа Таможенного Брокера
-                            </div>
-                            <div className='courses__info-image'>
-                                <Image src={course} alt='Изображение коуча' />
-                            </div>
-                            <div className='courses__info-pretitle'>
-                                <span>Специалист</span> по Таможенному
-                                Декларированию
-                            </div>
-                            <div className='courses__info-description'>
-                                Данный курс предназначен для работников
-                                предприятий, занимающихся внешнеэкономической
-                                деятельностью, приемом и поставкой грузов
-                                зарубежным партнерам. В ходе курса участники
-                                знакомятся с таможенным законодательством,
-                                заполняют необходимые таможенные документы,
-                                овладевают навыками взаимоотношений с
-                                таможенными службами. <br /> <br /> Полученные
-                                знания дают возможность самостоятельно, без
-                                посредников, правильно совершать таможенные
-                                операции, значительно ускорять этот пpoцecc,
-                                заявлять таможенную стоимость и код ТН ВЭД, а
-                                также грамотно рассчитывать необходимые
-                                таможенные платежи. <br /> <br /> По окончании
-                                курса ученики получают Сертификат. <br /> Курс
-                                проходит в г. Алматы
-                            </div>
-                            <Link
-                                className='courses__info-button'
-                                href='https://docs.google.com/forms/d/e/1FAIpQLSf4Z19Q3fjrvdFo7fnDtmxrmaaZYoR158DYiLnnTouhVSmcGQ/viewform'
-                            >
-                                Записаться на курс
-                                <Image
-                                    src={whiteArrowRight}
-                                    alt='Изображение стрелки'
-                                />
-                            </Link>
-                        </>
-                    ) : (
-                        <>
-                            <div className='courses__info-title'>
-                                Школа Таможенного Брокера
-                            </div>
-                            <div className='courses__info-wrapper'>
-                                <div className='courses__info-text'>
-                                    <div className='courses__info-pretitle'>
-                                        <span>Специалист</span> по Таможенному
-                                        Декларированию
-                                    </div>
-                                    <div className='courses__info-description'>
-                                        Данный курс предназначен для работников
-                                        предприятий, занимающихся
-                                        внешнеэкономической деятельностью,
-                                        приемом и поставкой грузов зарубежным
-                                        партнерам. В ходе курса участники
-                                        знакомятся с таможенным
-                                        законодательством, заполняют необходимые
-                                        таможенные документы, овладевают
-                                        навыками взаимоотношений с таможенными
-                                        службами. <br /> <br /> Полученные
-                                        знания дают возможность самостоятельно,
-                                        без посредников, правильно совершать
-                                        таможенные операции, значительно
-                                        ускорять этот пpoцecc, заявлять
-                                        таможенную стоимость и код ТН ВЭД, а
-                                        также грамотно рассчитывать необходимые
-                                        таможенные платежи. <br /> <br /> По
-                                        окончании курса ученики получают
-                                        Сертификат. <br /> Курс проходит в г.
-                                        Алматы
-                                    </div>
-                                    <Link
-                                        className='courses__info-button'
-                                        href='https://docs.google.com/forms/d/e/1FAIpQLSf4Z19Q3fjrvdFo7fnDtmxrmaaZYoR158DYiLnnTouhVSmcGQ/viewform'
-                                    >
-                                        Записаться на курс
-                                        <Image
-                                            src={whiteArrowRight}
-                                            alt='Изображение стрелки'
-                                        />
-                                    </Link>
-                                </div>
-                                <div className='courses__info-image'>
-                                    <Image
-                                        src={course}
-                                        alt='Изображение коуча'
-                                    />
-                                </div>
-                            </div>
-                        </>
-                    )}
+                    <CoursesInfo />
                 </div>
             </div>
 
@@ -304,171 +210,7 @@ const Courses: React.FC = () => {
                         Преподовательский состав
                     </div>
                     <div className='courses__staff-wrapper'>
-                        {isMobile ? (
-                            <>
-                                <div className='courses__staff-person'>
-                                    <div className='courses__staff-person__info'>
-                                        <div
-                                            className='courses__staff-person__image'
-                                            style={{
-                                                backgroundImage: `url(${person1.src})`,
-                                            }}
-                                        />
-                                        <div className='courses__staff-person__name'>
-                                            Святобог Марина Борисовна
-                                        </div>
-                                    </div>
-                                    <div className='courses__staff-person__description'>
-                                        является заместителем директора ТОО
-                                        &quot;GWL group&quot; и ведущим
-                                        специалистом компании по таможенному
-                                        оформлению грузов и смежным
-                                        процедурам.Проходила службу в таможенных
-                                        органах СССР и Республики Казахстан, где
-                                        начиная от рядового инспектора стала
-                                        заместителем начальника Департамента
-                                        таможенного контроля по
-                                        Северо-Казахстанской области. Имеет
-                                        звание подполковника таможенной службы.
-                                    </div>
-                                </div>
-                                <div className='courses__staff-person'>
-                                    <div className='courses__staff-person__info'>
-                                        <div
-                                            className='courses__staff-person__image'
-                                            style={{
-                                                backgroundImage: `url(${person2.src})`,
-                                                order: '2',
-                                            }}
-                                        />
-                                        <div
-                                            className='courses__staff-person__name'
-                                            style={{ textAlign: 'right' }}
-                                        >
-                                            Байсалов Азамат
-                                        </div>
-                                    </div>
-                                    <div className='courses__staff-person__description'>
-                                        Не только рассказывает о теоретических
-                                        основах, но и приводит примеры из
-                                        реальной практики, что помогает
-                                        студентам лучше понять, как применять
-                                        полученные знания на практике. Кроме
-                                        того, учитель активно использует
-                                        интерактивные методы обучения, такие как
-                                        кейс-стади и симуляции
-                                    </div>
-                                </div>
-                                <div className='courses__staff-person'>
-                                    <div className='courses__staff-person__info'>
-                                        <div
-                                            className='courses__staff-person__image'
-                                            style={{
-                                                backgroundImage: `url(${person3.src})`,
-                                            }}
-                                        />
-                                        <div className='courses__staff-person__name'>
-                                            Ибраева Айдана Нурмухамбетвна
-                                        </div>
-                                    </div>
-                                    <div className='courses__staff-person__description'>
-                                        Советник таможенной службы РК,
-                                        специалист-практик. Имеет общирный опыт
-                                        работы в таможенной сфере, а также Он
-                                        всегда открыт для вопросов и готов
-                                        оказать поддержку каждому студенту,
-                                        помогая преодолеть трудности в обучении
-                                        и достигать высоких результатов.
-                                    </div>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <div className='courses__staff-person'>
-                                    <div>
-                                        <div
-                                            className='courses__staff-person__image'
-                                            style={{
-                                                backgroundImage: `url(${person1.src})`,
-                                            }}
-                                        />
-                                    </div>
-                                    <div className='courses__staff-person__wrapper'>
-                                        <div className='courses__staff-person__fullname'>
-                                            Святобог Марина Борисовна
-                                        </div>
-                                        <div className='courses__staff-person__description'>
-                                            Является заместителем директора ТОО
-                                            &quot;GWL group&quot; и ведущим
-                                            специалистом компании по таможенному
-                                            оформлению грузов и смежным
-                                            процедурам. <br /> Проходила службу
-                                            в таможенных органах СССР и
-                                            Республики Казахстан, где начиная от
-                                            рядового инспектора стала
-                                            заместителем начальника Департамента
-                                            таможенного контроля по
-                                            Северо-Казахстанской области. Имеет
-                                            звание подполковника таможенной
-                                            службы.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='courses__staff-person'>
-                                    <div className='courses__staff-person__wrapper'>
-                                        <div className='courses__staff-person__right-fullname'>
-                                            Байсалов Азамат
-                                        </div>
-                                        <div className='courses__staff-person__right-description'>
-                                            Не только рассказывает о
-                                            теоретических основах, но и приводит
-                                            примеры из реальной практики, что
-                                            помогает студентам лучше понять, как
-                                            применять полученные знания на
-                                            практике. Кроме того, учитель
-                                            активно использует интерактивные
-                                            методы обучения, такие как
-                                            кейс-стади и симуляции
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            className='courses__staff-person__image'
-                                            style={{
-                                                backgroundImage: `url(${person2.src})`,
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className='courses__staff-person'>
-                                    <div>
-                                        <div
-                                            className='courses__staff-person__image'
-                                            style={{
-                                                backgroundImage: `url(${person3.src})`,
-                                            }}
-                                        />
-                                    </div>
-                                    <div className='courses__staff-person__wrapper'>
-                                        <div className='courses__staff-person__fullname'>
-                                            Качкаев Евгений Николаевич
-                                        </div>
-                                        <div className='courses__staff-person__description'>
-                                            Советник таможенной службы РК,
-                                            специалист-практик. Имеет общирный
-                                            опыт работы в таможенной сфере, а
-                                            также Он всегда открыт для вопросов
-                                            и готов оказать поддержку каждому
-                                            студенту, помогая преодолеть
-                                            трудности в обучении и достигать
-                                            высоких результатов.
-                                        </div>
-                                    </div>
-                                </div>
-                            </>
-                        )}
+                        <CoursesStaff />
                     </div>
                 </div>
             </div>

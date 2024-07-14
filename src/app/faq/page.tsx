@@ -1,9 +1,16 @@
 import QuestionsData from '@/utils/QuestionsData'
+import type { Metadata } from 'next'
 
 import ServicesList from '@/compontents/services-list/ServicesList'
 
 import promo from '@/assets/faqpromo.png'
 import './faq.scss'
+
+export const metadata: Metadata = {
+    title: 'Часто задаваемые вопросы',
+    description:
+        'Ответы на самые частые вопросы в работе таможенного представителя',
+}
 
 const Faq: React.FC = () => {
     return (
