@@ -8,6 +8,23 @@ export const metadata: Metadata = {
     title: 'Контакты',
     description:
         'Наши контактные данные свяжитесь с нами и начните расширять Ваш бизнес!',
+    keywords: [
+        'Контактная информация GWL Group',
+        'Наши контакты Алматы',
+        'Адрес офиса GWL Group',
+        'Телефон GWL Group',
+        'WhatsApp GWL Group',
+        'Электронная почта GWL Group',
+        'Рабочее время GWL Group',
+        'Как связаться с GWL Group',
+        'Контактная информация компании в Алматы',
+        'Телефон и адрес GWL Group',
+        'Как дозвониться до GWL Group',
+        'Адрес и телефон офиса GWL Group',
+        'Контакты GWL Group в Казахстане',
+        'Как добраться до офиса GWL Group',
+        'Рабочие часы GWL Group',
+    ],
 }
 
 const Contacts: React.FC = () => {
