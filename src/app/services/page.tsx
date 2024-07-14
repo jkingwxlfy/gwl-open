@@ -1,9 +1,15 @@
 import ServicesData from '@/utils/ServicesData'
+import { Metadata } from 'next'
 
 import ServicesList from '@/compontents/services-list/ServicesList'
 
 import promo from '@/assets/servicespromo.png'
 import './services.scss'
+
+export const metadata: Metadata = {
+    title: 'Услуги',
+    description: 'Услуги которые мы можем предоставить нашим клиентам',
+}
 
 const Services: React.FC = () => {
     return (
