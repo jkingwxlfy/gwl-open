@@ -70,7 +70,7 @@ const CoursesStaff: React.FC = () => {
                                 }}
                             />
                             <div className='courses__staff-person__name'>
-                                Ибраева Айдана Нурмухамбетвна
+                                Качкаев Евгений Николаевич
                             </div>
                         </div>
                         <div className='courses__staff-person__description'>
