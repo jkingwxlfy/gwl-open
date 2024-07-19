@@ -47,12 +47,12 @@ const AboutPage: React.FC = () => {
                 style={{ backgroundImage: `url(${aboutPromo.src})` }}
             >
                 <div className='about-page__promo__container'>
-                    <div className='about-page__promo-title'>
+                    <h1 className='about-page__promo-title'>
                         о компании TOO <br /> <span>”GWL GROUP”</span>{' '}
-                    </div>
-                    <div className='about-page__promo-pretitle'>
+                    </h1>
+                    <h2 className='about-page__promo-pretitle'>
                         лучший таможенный представитель в Республике Казахстан!
-                    </div>
+                    </h2>
                 </div>
             </div>
 

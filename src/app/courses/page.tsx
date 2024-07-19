@@ -48,13 +48,13 @@ const Courses: React.FC = () => {
             >
                 <div className='courses__promo__container'>
                     <div className='courses__promo-wrapper'>
-                        <div className='courses__promo-title'>
+                        <h1 className='courses__promo-title'>
                             Школа Таможенного Брокера в Алматы
-                        </div>
-                        <div className='courses__promo-description'>
+                        </h1>
+                        <h2 className='courses__promo-description'>
                             от лучших специалистов компании{' '}
                             <span>“GWL Group”</span>
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </div>

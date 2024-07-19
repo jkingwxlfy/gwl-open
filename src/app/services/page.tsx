@@ -39,11 +39,11 @@ const Services: React.FC = () => {
             >
                 <div className='services__promo__container'>
                     <div className='services__promo-wrapper'>
-                        <div className='services__promo-title'>Наши услуги</div>
-                        <div className='services__promo-description'>
+                        <h1 className='services__promo-title'>Наши услуги</h1>
+                        <h2 className='services__promo-description'>
                             Какие услуги мы можем предоставить для наших
                             клиентов?
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </div>

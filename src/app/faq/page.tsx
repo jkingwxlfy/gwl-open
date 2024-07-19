@@ -38,12 +38,12 @@ const Faq: React.FC = () => {
             >
                 <div className='faq__promo__container'>
                     <div className='faq__promo-wrapper'>
-                        <div className='faq__promo-title'>
+                        <h1 className='faq__promo-title'>
                             Ответы на самые частые вопросы
-                        </div>
-                        <div className='faq__promo-pretitle'>
+                        </h1>
+                        <h2 className='faq__promo-pretitle'>
                             в работе таможенного представителя
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </div>

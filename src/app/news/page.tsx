@@ -36,11 +36,11 @@ const News: React.FC = () => {
             >
                 <div className='news__promo__container'>
                     <div className='news__promo-wrapper'>
-                        <div className='news__promo-title'>Новости</div>
-                        <div className='news__promo-description'>
+                        <h1 className='news__promo-title'>Новости</h1>
+                        <h2 className='news__promo-description'>
                             в таможенном мире вместе с компанией{' '}
                             <span>“GWL Group”</span>
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </div>

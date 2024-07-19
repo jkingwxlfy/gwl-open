@@ -36,12 +36,12 @@ const Contacts: React.FC = () => {
             >
                 <div className='contacts__promo__container'>
                     <div className='contacts__promo-wrapper'>
-                        <div className='contacts__promo-title'>
+                        <h1 className='contacts__promo-title'>
                             Наши контактные данные
-                        </div>
-                        <div className='contacts__promo-pretitle'>
+                        </h1>
+                        <h2 className='contacts__promo-pretitle'>
                             свяжитесь с нами и начните расширять Ваш бизнес!
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </div>
