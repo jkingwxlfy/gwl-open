@@ -33,8 +33,8 @@ const Footer: React.FC = () => {
                             </div>
                         </div>
                         <div className='footer__copyright'>
-                            Copyright © 2024 Таможенный представитель ТОО «GWL
-                            group». <br /> Все права защищены.
+                            Copyright © 2024 ТОО «GWL group». <br /> Все права
+                            защищены.
                         </div>
                     </div>
                     <div className='footer__map'>
@@ -61,8 +61,8 @@ const Footer: React.FC = () => {
                                 </div>
                             </div>
                             <div className='footer__copyright'>
-                                Copyright © 2024 Таможенный представитель ТОО
-                                «GWL group». <br /> Все права защищены.
+                                Copyright © 2024 ТОО «GWL group». <br /> Все
+                                права защищены.
                             </div>
                         </div>
                     </div>

@@ -79,6 +79,20 @@ const Contacts: React.FC = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='contacts__map-description'>
+                            <div className='contacts__map-description__title'>
+                                <span>GWL</span> <div>GROUP</div>
+                            </div>
+                            <div className='contacts__map-description__text'>
+                                Компания GWL Group рада предложить свои услуги
+                                для решения всех вопросов, связанных с
+                                внешнеэкономической деятельностью и таможенным
+                                оформлением. Мы понимаем, что процесс оформления
+                                грузов и взаимодействия с соответствующими
+                                службами может быть сложным и требовать
+                                значительных усилий.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 170px;
+        padding-top: 140px;
         height: 360px;
         color: rgb(245 245 245);
 
@@ -37,7 +37,7 @@
         &-wrapper {
             display: grid;
             gap: 16px;
-            width: 386px;
+            width: 540px;
         }
 
         &-title {
@@ -50,7 +50,7 @@
             line-height: 120.48%;
             color: rgb(245 245 245);
             font-size: 22px;
-            font-weight: 500;
+            font-weight: 300;
 
             span {
                 color: rgb(83 198 64);
@@ -135,7 +135,7 @@
 @media (width <= 800px) {
     .news {
         &__promo {
-            padding-top: 166px;
+            padding-top: 110px;
             padding-bottom: 40px;
             height: 285px;
 
@@ -144,9 +144,10 @@
             }
 
             &-description {
+                width: 330px;
                 line-height: 120.48%;
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 300;
             }
 
             &-wrapper {

@@ -18,7 +18,7 @@ export function generateMetadata({ params }: INewsPageProps) {
         .title
 
     return {
-        title: 'Новости',
+        title: description,
         description,
     }
 }

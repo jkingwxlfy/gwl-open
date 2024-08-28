@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import NewsList from '@/compontents/(news)/news-list/NewsList'
+import NewsPromo from '@/compontents/(news)/news-promo/NewsPromo'
 
 import promo from '@/assets/newspromo.png'
 import './news.scss'
@@ -36,11 +37,7 @@ const News: React.FC = () => {
             >
                 <div className='news__promo__container'>
                     <div className='news__promo-wrapper'>
-                        <h1 className='news__promo-title'>Новости</h1>
-                        <h2 className='news__promo-description'>
-                            в таможенном мире вместе с компанией{' '}
-                            <span>“GWL Group”</span>
-                        </h2>
+                        <NewsPromo />
                     </div>
                 </div>
             </div>
@@ -51,11 +48,6 @@ const News: React.FC = () => {
                     <div className='news__list-list'>
                         <NewsList />
                     </div>
-                    {/* {isMobile ? (
-                        <Link className='news__list-button' href='/'>
-                            Смотреть все
-                        </Link>
-                    ) : null} */}
                 </div>
             </div>
         </section>
