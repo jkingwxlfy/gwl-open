@@ -19,7 +19,7 @@ import whatsapp from '@/assets/whatsappicon-trans.png'
 import './app.scss'
 
 export const metadata: Metadata = {
-    title: 'GWL Group - Лидер в сфере грузоперевозок и логистики',
+    title: 'GWL Group - Лучший таможенный брокер | представитель в Казахстане - Алматы',
     description: `Компания GWL Group - опытный брокер
     в области внешнеэкономической деятельности на
     рынке РК, внесенный в официальный Казахстанский
