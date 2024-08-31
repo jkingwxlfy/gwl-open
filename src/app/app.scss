@@ -257,13 +257,12 @@
             &__text {
                 padding-bottom: 31px;
                 line-height: 20px;
-                color: rgb(35 35 35);
 
-                span {
-                    display: flex;
+                div {
                     color: rgb(20 145 0);
+                    font-weight: 400;
 
-                    p {
+                    span {
                         font-weight: 600;
                     }
                 }
@@ -311,6 +310,7 @@
                 font-size: 24px;
                 font-weight: 500;
 
+                /* stylelint-disable-next-line no-descending-specificity */
                 span {
                     color: rgb(20 145 0);
                     font-weight: 600;

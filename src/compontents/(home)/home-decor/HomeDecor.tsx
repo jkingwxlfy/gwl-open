@@ -68,10 +68,10 @@ const HomeDecor: React.FC = () => {
                             вашего груза квалифицированному специалисту в этой
                             области.Такому, как компания “GWL Group” <br />{' '}
                             <br />
-                            <span>
+                            <div>
                                 Такому, как компания&nbsp;
-                                <p>“GWL Group”</p>
-                            </span>
+                                <span>“GWL Group”</span>
+                            </div>
                         </div>
                         <Link href='/contacts'>
                             Связаться с нами{' '}

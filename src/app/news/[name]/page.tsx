@@ -14,12 +14,11 @@ interface INewsPageProps {
 }
 
 export function generateMetadata({ params }: INewsPageProps) {
-    const description = NewsData.filter(item => item.url === params.name)[0]
-        .title
+    const { title, text } = NewsData.filter(item => item.url === params.name)[0]
 
     return {
-        title: description,
-        description,
+        title,
+        description: text,
     }
 }
 
@@ -34,11 +33,13 @@ const NewsPage: React.FC<INewsPageProps> = ({ params }) => {
             >
                 <div className='news__promo__container'>
                     <div className='news__promo-wrapper'>
-                        <div className='news__promo-title'>Новости</div>
-                        <div className='news__promo-description'>
-                            в таможенном мире вместе с компанией{' '}
-                            <span>“GWL Group”</span>
-                        </div>
+                        <h1 className='news__promo-title'>Новости</h1>
+                        <h2 className='news__promo-description'>
+                            в таможенном мире вместе с компанией <br />
+                            <span>“GWL Group”.</span> <br /> Главные новости дня
+                            : актуальные события, аналитика и эксклюзивные
+                            материалы
+                        </h2>
                     </div>
                 </div>
             </div>

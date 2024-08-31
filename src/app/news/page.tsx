@@ -7,8 +7,9 @@ import promo from '@/assets/newspromo.png'
 import './news.scss'
 
 export const metadata: Metadata = {
-    title: 'Новости',
-    description: 'Новости в таможенном мире вместе с компанией',
+    title: 'GWL Group - Новости компании',
+    description:
+        'Новости в таможенном мире вместе с компанией. Главные новости дня : актуальные события, аналитика и эксклюзивные материалы',
     keywords: [
         'Новости таможни',
         'Новости GWL GROUP',

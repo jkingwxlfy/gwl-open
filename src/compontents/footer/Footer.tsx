@@ -1,10 +1,13 @@
 'use client'
 import useIsMobile from '@/hooks/useIsMobile'
+import { Suspense, lazy } from 'react'
 
 import Map from '@/compontents/map/Map'
 
 import footerbg from '@/assets/footerbg.png'
 import './footer.scss'
+
+const GoogleMap = lazy(() => import('@/compontents/map/Map'))
 
 const Footer: React.FC = () => {
     const isMobile = useIsMobile()
@@ -38,7 +41,9 @@ const Footer: React.FC = () => {
                         </div>
                     </div>
                     <div className='footer__map'>
-                        <Map />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <GoogleMap />
+                        </Suspense>
                     </div>
                 </div>
             ) : (
@@ -67,7 +72,9 @@ const Footer: React.FC = () => {
                         </div>
                     </div>
                     <div className='footer__map'>
-                        <Map />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <GoogleMap />
+                        </Suspense>
                     </div>
                 </>
             )}
