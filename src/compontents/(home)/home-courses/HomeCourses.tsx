@@ -38,8 +38,8 @@ const HomeCourses: React.FC = () => {
                         платежи. <br /> <br /> По завершении курса выдается
                         Сертификат. Обучение проходит в г. Алматы.
                     </div>
-                    <Link href='/courses'>
-                        Подробнее{' '}
+                    <Link href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'>
+                        Записаться на курс
                         <Image
                             src={whiteArrowRight}
                             alt='Изображение стрелки'
@@ -73,8 +73,8 @@ const HomeCourses: React.FC = () => {
                             <br /> <br /> По завершении курса выдается
                             Сертификат. Обучение проходит в г. Алматы.
                         </div>
-                        <Link href='/courses'>
-                            Подробнее{' '}
+                        <Link href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'>
+                            Записаться на курс
                             <Image
                                 src={whiteArrowRight}
                                 alt='Изображение стрелки'

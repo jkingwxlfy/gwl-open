@@ -40,7 +40,7 @@ const CoursesInfo: React.FC = () => {
                     </div>
                     <Link
                         className='courses__info-button'
-                        href='https://docs.google.com/forms/d/e/1FAIpQLSf4Z19Q3fjrvdFo7fnDtmxrmaaZYoR158DYiLnnTouhVSmcGQ/viewform'
+                        href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'
                     >
                         Записаться на курс
                         <Image
@@ -80,7 +80,7 @@ const CoursesInfo: React.FC = () => {
                             </div>
                             <Link
                                 className='courses__info-button'
-                                href='https://docs.google.com/forms/d/e/1FAIpQLSf4Z19Q3fjrvdFo7fnDtmxrmaaZYoR158DYiLnnTouhVSmcGQ/viewform'
+                                href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'
                             >
                                 Записаться на курс
                                 <Image

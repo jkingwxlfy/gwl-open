@@ -26,6 +26,22 @@ export default function RootLayout({
                     name='google-site-verification'
                     content='k7_UAJKcEI1lpmC5ws6HKuys6BY0AZevbnbvK8a7wSA'
                 />
+                <script
+                    async
+                    src='https://www.googletagmanager.com/gtag/js?id=G-HLFRMKC3K5'
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){window.dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-HLFRMKC3K5', {
+                            page_path: window.location.pathname,
+                        });
+                        `,
+                    }}
+                />
             </Head>
             <body className={montserrat.className}>
                 <main className='container'>
