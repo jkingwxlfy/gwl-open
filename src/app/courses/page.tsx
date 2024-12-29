@@ -85,7 +85,7 @@ const Courses: React.FC = () => {
                     <div className='courses__cards1-wrapper'>
                         <Card>
                             <div className='card__image'>
-                                <Image src={coursecard1} alt={''} />
+                                <Image src={coursecard1} alt='' />
                             </div>
                             <div className='card__title'>
                                 Повышение Квалификации
@@ -97,7 +97,7 @@ const Courses: React.FC = () => {
                         </Card>
                         <Card>
                             <div className='card__image'>
-                                <Image src={coursecard2} alt={''} />
+                                <Image src={coursecard2} alt='' />
                             </div>
                             <div className='card__title'>
                                 Лучшие Преподаватели
@@ -110,7 +110,7 @@ const Courses: React.FC = () => {
 
                         <Card>
                             <div className='card__image'>
-                                <Image src={coursecard3} alt={''} />
+                                <Image src={coursecard3} alt='' />
                             </div>
                             <div className='card__title'>
                                 Эффективное обучение
@@ -231,7 +231,7 @@ const Courses: React.FC = () => {
                     <div className='courses__cards1-wrapper'>
                         <Card>
                             <div className='card__image'>
-                                <Image src={coursecardphose} alt={''} />
+                                <Image src={coursecardphose} alt='' />
                             </div>
                             <div className='card__title'>
                                 Бесплатные консультации
@@ -243,7 +243,7 @@ const Courses: React.FC = () => {
                         </Card>
                         <Card>
                             <div className='card__image'>
-                                <Image src={coursecardmedal} alt={''} />
+                                <Image src={coursecardmedal} alt='' />
                             </div>
                             <div className='card__title'>
                                 Сертификат об окончании
@@ -255,7 +255,7 @@ const Courses: React.FC = () => {
                         </Card>
                         <Card>
                             <div className='card__image'>
-                                <Image src={coursecardspeed} alt={''} />
+                                <Image src={coursecardspeed} alt='' />
                             </div>
                             <div className='card__title'>Короткий срок</div>
                             <div className='card__text'>

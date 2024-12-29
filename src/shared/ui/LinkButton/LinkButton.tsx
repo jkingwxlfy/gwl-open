@@ -21,7 +21,8 @@ const LinkButton = ({
     mobileWidth,
 }: Props): JSX.Element => {
     const isMobile = useIsMobile()
-    const currentWidth = isMobile ? `${mobileWidth}px` : `${width}px` || '100%'
+    const currentWidth =
+        (isMobile ? `${mobileWidth}px` : `${width}px`) || '100%'
 
     return (
         <Link

@@ -40,6 +40,7 @@ const HeroSectionSlider: React.FC = () => {
                     <div className={styles.nav}>
                         {slides.map((_, index) => (
                             <div
+                                key={index}
                                 onClick={() => handleNavClick(index)}
                                 className={cn({
                                     [styles.active]: index === activeSlider,
@@ -52,7 +53,7 @@ const HeroSectionSlider: React.FC = () => {
                             <Image
                                 key={index}
                                 src={item.image}
-                                alt={''}
+                                alt=''
                                 className={styles.slide}
                                 onClick={() => router.push(item.refer)}
                             />

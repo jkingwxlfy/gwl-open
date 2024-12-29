@@ -11,7 +11,7 @@ const NewsList: React.FC = () => {
             {isMobile ? (
                 <>
                     {NewsData.map(item => (
-                        <article>
+                        <article key={item.id}>
                             <Link
                                 className='news__list-list__item'
                                 key={item.id}
@@ -30,7 +30,7 @@ const NewsList: React.FC = () => {
             ) : (
                 <>
                     {NewsData.map(item => (
-                        <article>
+                        <article key={item.id}>
                             <Link
                                 className='news__list-list__item'
                                 key={item.id}
