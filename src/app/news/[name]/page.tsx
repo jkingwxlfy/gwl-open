@@ -32,7 +32,7 @@ const NewsPage: React.FC<INewsPageProps> = ({ params }) => {
                 style={{ backgroundImage: `url(${promo.src})` }}
             >
                 <div className='news__promo__container'>
-                    <div className='news__promo-wrapper'>
+                    <section className='news__promo-wrapper'>
                         <h1 className='news__promo-title'>Новости</h1>
                         <h2 className='news__promo-description'>
                             в таможенном мире вместе с компанией <br />
@@ -40,29 +40,27 @@ const NewsPage: React.FC<INewsPageProps> = ({ params }) => {
                             : актуальные события, аналитика и эксклюзивные
                             материалы
                         </h2>
-                    </div>
+                    </section>
                 </div>
             </div>
 
             <div className='news-page__main'>
-                <div className='news-page__main__container'>
-                    <div className='news-page__main-title'>
+                <section className='news-page__main__container'>
+                    <h1 className='news-page__main-title'>
                         {currentNews.title}
-                    </div>
+                    </h1>
                     <Image
                         src={currentNews.imageTitle}
                         alt='Изображение новостей'
                     />
-                    <div
+                    <p
                         className='news-page__main-text'
                         dangerouslySetInnerHTML={{
                             __html: currentNews.text,
                         }}
                     />
-                    <div className='news-page__main-data'>
-                        {currentNews.data}
-                    </div>
-                </div>
+                    <p className='news-page__main-data'>{currentNews.data}</p>
+                </section>
             </div>
         </section>
     )

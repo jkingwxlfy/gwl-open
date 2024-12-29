@@ -38,6 +38,7 @@
         padding-top: 50px;
         line-height: 20px;
         font-size: 16px;
+        font-weight: 400;
     }
 
     &__info {
@@ -74,6 +75,7 @@
             padding-top: 24px;
             line-height: 20px;
             font-size: 14px;
+            font-weight: 400;
         }
 
         &__title {
@@ -91,6 +93,7 @@
             display: block;
             position: relative;
             padding-top: 24px;
+            max-width: 330px;
 
             img {
                 display: block;

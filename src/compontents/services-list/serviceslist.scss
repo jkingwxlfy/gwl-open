@@ -10,13 +10,6 @@
         width: 1110px;
     }
 
-    &-button {
-        @include green-button;
-
-        width: 410px;
-        height: 42px;
-    }
-
     &-title {
         color: rgb(35 35 35);
         font-size: 36px;

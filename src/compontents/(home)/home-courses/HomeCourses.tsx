@@ -1,7 +1,8 @@
 'use client'
 import useIsMobile from '@/hooks/useIsMobile'
-import Link from 'next/link'
 import Image from 'next/image'
+
+import { LinkButton } from '@/shared/ui'
 
 import course from '@/assets/course.png'
 import whiteArrowRight from '@/assets/whitearrowright.png'
@@ -38,13 +39,17 @@ const HomeCourses: React.FC = () => {
                         платежи. <br /> <br /> По завершении курса выдается
                         Сертификат. Обучение проходит в г. Алматы.
                     </div>
-                    <Link href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'>
+                    <LinkButton
+                        type='green'
+                        href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'
+                        width={300}
+                    >
                         Записаться на курс
                         <Image
                             src={whiteArrowRight}
                             alt='Изображение стрелки'
                         />
-                    </Link>
+                    </LinkButton>
                 </div>
             ) : (
                 <>
@@ -73,13 +78,17 @@ const HomeCourses: React.FC = () => {
                             <br /> <br /> По завершении курса выдается
                             Сертификат. Обучение проходит в г. Алматы.
                         </div>
-                        <Link href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'>
+                        <LinkButton
+                            type='green'
+                            href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'
+                            width={300}
+                        >
                             Записаться на курс
                             <Image
                                 src={whiteArrowRight}
                                 alt='Изображение стрелки'
                             />
-                        </Link>
+                        </LinkButton>
                     </div>
                     <div className='app__course-image'>
                         <Image src={course} alt='Изображение' />

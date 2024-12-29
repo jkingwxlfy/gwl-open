@@ -1,0 +1,75 @@
+@use '@/styles/variables' as vars;
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: end;
+}
+
+.titleQ {
+    color: vars.token(white-primary);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.outer {
+    position: relative;
+    margin: 0 auto;
+    width: 319px;
+    height: 156px;
+    overflow: hidden;
+}
+
+.inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.slide {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    gap: 4px;
+    align-items: center;
+
+    div {
+        border-radius: 100%;
+        background-color: vars.token(grey);
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+
+        &.active {
+            background-color: vars.token(green-primary);
+        }
+    }
+}
+
+.title {
+    padding: 0 16px;
+    text-align: center;
+    color: vars.token(white-primary);
+    font-size: 16px;
+    font-weight: 500;
+}

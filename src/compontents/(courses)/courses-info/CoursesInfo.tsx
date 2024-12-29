@@ -5,6 +5,7 @@ import useIsMobile from '@/hooks/useIsMobile'
 
 import whiteArrowRight from '@/assets/whitearrowright.png'
 import course from '@/assets/course.png'
+import { LinkButton } from '@/shared/ui'
 
 const CoursesInfo: React.FC = () => {
     const isMobile = useIsMobile()
@@ -38,16 +39,18 @@ const CoursesInfo: React.FC = () => {
                         По окончании обучения участники получают сертификат.
                         Курс проходит в Алматы
                     </div>
-                    <Link
-                        className='courses__info-button'
-                        href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'
+                    <LinkButton
+                        href='/contacts'
+                        type='green'
+                        mobileWidth={328}
+                        width={285}
                     >
                         Записаться на курс
                         <Image
                             src={whiteArrowRight}
                             alt='Изображение стрелки'
                         />
-                    </Link>
+                    </LinkButton>
                 </>
             ) : (
                 <>
@@ -78,16 +81,18 @@ const CoursesInfo: React.FC = () => {
                                 По окончании обучения участники получают
                                 сертификат. Курс проходит в Алматы
                             </div>
-                            <Link
-                                className='courses__info-button'
-                                href='https://api.whatsapp.com/send/?phone=77077267526&text&type=phone_number&app_absent=0'
+                            <LinkButton
+                                href='/contacts'
+                                type='green'
+                                mobileWidth={328}
+                                width={285}
                             >
                                 Записаться на курс
                                 <Image
                                     src={whiteArrowRight}
                                     alt='Изображение стрелки'
                                 />
-                            </Link>
+                            </LinkButton>
                         </div>
                         <div className='courses__info-image'>
                             <Image src={course} alt='Изображение коуча' />

@@ -1,0 +1,34 @@
+@use '../../../../styles/variables.scss' as vars;
+
+.wrapper {
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid #00000014;
+    border-radius: 15px;
+    background-color: vars.token(green-secondary);
+    padding: 11px 12px;
+    max-width: 343px;
+}
+
+.flagIcon {
+    position: absolute;
+    top: -76px;
+    right: -128px;
+    z-index: 9;
+}
+
+@media (width <= 800px) {
+    .wrapper {
+        position: relative;
+    }
+
+    .flagIcon {
+        position: absolute;
+        top: -41px;
+        right: -17px;
+        z-index: 9;
+    }
+}

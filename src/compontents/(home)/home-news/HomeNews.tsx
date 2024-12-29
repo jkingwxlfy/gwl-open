@@ -36,22 +36,20 @@ const HomeNews: React.FC = () => {
                 <div className='app__news-list'>
                     {NewsData.length > 3 ? (
                         <>
-                            {NewsData.slice(0, NewsData.length - 1).map(
-                                item => (
-                                    <Link
-                                        className='app__news-list__item'
-                                        href={`/news/${item.url}`}
-                                        key={item.id}
-                                        style={{
-                                            backgroundImage: `url(${item.imagePreview.src})`,
-                                        }}
-                                    >
-                                        <div className='app__news-list__item-title'>
-                                            {item.title}
-                                        </div>
-                                    </Link>
-                                ),
-                            )}
+                            {NewsData.slice(0, 3).map(item => (
+                                <Link
+                                    className='app__news-list__item'
+                                    href={`/news/${item.url}`}
+                                    key={item.id}
+                                    style={{
+                                        backgroundImage: `url(${item.imagePreview.src})`,
+                                    }}
+                                >
+                                    <div className='app__news-list__item-title'>
+                                        {item.title}
+                                    </div>
+                                </Link>
+                            ))}
                         </>
                     ) : (
                         NewsData.map(item => (

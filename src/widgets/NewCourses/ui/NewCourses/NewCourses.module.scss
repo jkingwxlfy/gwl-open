@@ -1,0 +1,62 @@
+@use '@/styles/variables' as vars;
+
+.courses {
+    padding-top: 80px;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1110px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 654px;
+    text-align: right;
+
+    h1 {
+        width: 652px;
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (width <= 800px) {
+    .courses {
+        padding-top: 40px;
+        color: token(black1);
+
+        h1 {
+            padding-top: 24px;
+            padding-bottom: 16px;
+            width: auto;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            text-align: left;
+            font-size: 14px;
+        }
+    }
+
+    .text {
+        display: block;
+        width: auto;
+    }
+
+    .container {
+        display: block;
+        margin: 0 auto;
+        width: 330px;
+    }
+}

@@ -1,18 +1,26 @@
+@use '@/styles/variables' as vars;
+
 .contact-border {
     background-color: #333;
-    height: 88px;
 
     &__container {
         display: flex;
         margin: 0 auto;
-        padding: 20px 0 165px;
+        padding: 20px 0;
         width: 1110px;
     }
 
     &__row {
-        width: 646px;
-        line-height: 150%;
-        color: #fff;
+        width: 647px;
+
+        h1,
+        p {
+            display: inline;
+            line-height: 150%;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+        }
 
         br {
             display: none;
@@ -22,27 +30,36 @@
 
 @media (width <= 800px) {
     .contact-border {
-        height: 105px;
+        height: auto;
 
         &__container {
             margin: 0 auto;
             padding: 16px 0;
-            width: 330px;
+            width: 328px;
             height: 100%;
         }
 
         &__row {
-            width: 328px;
-            line-height: 150%;
-            font-size: 12px;
-            font-weight: 400;
+            width: 100%;
+
+            h1 {
+                display: block;
+                color: vars.token(green-primary);
+            }
+
+            p {
+                color: vars.token(white-primary);
+            }
+
+            p,
+            h1 {
+                line-height: 150%;
+                font-size: 12px;
+                font-weight: 400;
+            }
 
             br {
                 display: inline;
-            }
-
-            span {
-                color: rgb(83 198 64);
             }
         }
     }

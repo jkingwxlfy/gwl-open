@@ -1,13 +1,14 @@
 @import '../../styles/mixins';
 
 .courses {
+    scroll-behavior: smooth;
+
     &__promo {
         position: relative;
         z-index: 1;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 124px;
         height: 360px;
         color: rgb(245 245 245);
 
@@ -26,15 +27,39 @@
 
         &__container {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             margin: 0 auto;
+            padding-top: 124px;
+            padding-bottom: 30px;
             width: 1110px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            width: 350px;
+            height: 180px !important;
+
+            h1 {
+                width: 320px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 500;
+            }
         }
 
         &-wrapper {
             display: grid;
             gap: 16px;
-            width: 400px;
+            width: 401px;
         }
 
         &-title {
@@ -308,18 +333,26 @@
 @media (width <= 800px) {
     .courses {
         &__promo {
+            background-position: 39% 7%;
+            background-size: cover;
             padding-top: 141px;
             height: auto;
             color: rgb(245 245 245);
 
             &__container {
                 display: block;
+                padding-top: 0;
+                padding-bottom: 40px;
                 width: 330px;
+
+                a {
+                    text-decoration: none;
+                }
             }
 
             &-wrapper {
                 display: block;
-                padding-bottom: 40px;
+                padding-bottom: 20px;
                 width: 260px;
                 height: auto;
             }

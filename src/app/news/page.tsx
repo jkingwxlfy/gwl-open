@@ -44,12 +44,12 @@ const News: React.FC = () => {
             </div>
 
             <div className='news__list'>
-                <div className='news__list__container'>
-                    <div className='news__list-title'>Новости</div>
-                    <div className='news__list-list'>
+                <section className='news__list__container'>
+                    <h1 className='news__list-title'>Новости</h1>
+                    <section className='news__list-list'>
                         <NewsList />
-                    </div>
-                </div>
+                    </section>
+                </section>
             </div>
         </section>
     )

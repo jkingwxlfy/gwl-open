@@ -18,64 +18,64 @@ const Footer: React.FC = () => {
             style={{ backgroundImage: `url(${footerbg.src})` }}
         >
             {isMobile ? (
-                <div className='footer__container'>
+                <section className='footer__container'>
                     <div className='footer__info'>
                         <div className='footer__title'>Найти нас : </div>
-                        <div className='footer__contacts'>
-                            <div className='footer__contacts-item'>
+                        <section className='footer__contacts'>
+                            <article className='footer__contacts-item'>
                                 г. Алматы, пр. Суюнбая д. 12
-                            </div>
-                            <div className='footer__contacts-item'>
+                            </article>
+                            <article className='footer__contacts-item'>
                                 Телефон : +7 (727) 367 16 67
-                            </div>
-                            <div className='footer__contacts-item'>
+                            </article>
+                            <article className='footer__contacts-item'>
                                 WhatsApp : +7 707 726 75 26
-                            </div>
-                            <div className='footer__contacts-item'>
+                            </article>
+                            <article className='footer__contacts-item'>
                                 gwl_group@inbox.ru
-                            </div>
-                        </div>
-                        <div className='footer__copyright'>
+                            </article>
+                        </section>
+                        <h1 className='footer__copyright'>
                             Copyright © 2024 ТОО «GWL group». <br /> Все права
                             защищены.
-                        </div>
+                        </h1>
                     </div>
-                    <div className='footer__map'>
-                        <Suspense fallback={<div>Loading...</div>}>
+                    {/* <div className='footer__map'>
+                        <Suspense fallback={<div></div>}>
                             <GoogleMap />
                         </Suspense>
-                    </div>
-                </div>
+                    </div> */}
+                </section>
             ) : (
                 <>
-                    <div className='footer__container'>
+                    <section className='footer__container'>
                         <div className='footer__info'>
                             <div className='footer__title'>Найти нас : </div>
-                            <div className='footer__contacts'>
-                                <div className='footer__contacts-item'>
+                            <section className='footer__contacts'>
+                                <article className='footer__contacts-item'>
                                     г. Алматы, пр. Суюнбая д. 12
-                                </div>
-                                <div className='footer__contacts-item'>
+                                </article>
+                                <article className='footer__contacts-item'>
                                     Телефон : +7 (727) 367 16 67
-                                </div>
-                                <div className='footer__contacts-item'>
+                                </article>
+                                <article className='footer__contacts-item'>
                                     WhatsApp : +7 707 726 75 26
-                                </div>
-                                <div className='footer__contacts-item'>
+                                </article>
+                                <article className='footer__contacts-item'>
                                     gwl_group@inbox.ru
-                                </div>
-                            </div>
-                            <div className='footer__copyright'>
+                                </article>
+                            </section>
+                            <h1 className='footer__copyright'>
                                 Copyright © 2024 ТОО «GWL group». <br /> Все
                                 права защищены.
-                            </div>
+                            </h1>
                         </div>
-                    </div>
-                    <div className='footer__map'>
-                        <Suspense fallback={<div>Loading...</div>}>
+                    </section>
+                    {/* <div className='footer__map'>
+                        <Suspense fallback={<div></div>}>
                             <GoogleMap />
                         </Suspense>
-                    </div>
+                    </div> */}
                 </>
             )}
         </footer>

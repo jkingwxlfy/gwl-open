@@ -11,38 +11,42 @@ const NewsList: React.FC = () => {
             {isMobile ? (
                 <>
                     {NewsData.map(item => (
-                        <Link
-                            className='news__list-list__item'
-                            key={item.id}
-                            href={`/news/${item.url}`}
-                            style={{
-                                backgroundImage: `url(${item.imagePreview.src})`,
-                            }}
-                        >
-                            <div className='news__list-list__item-title'>
-                                {item.title}
-                            </div>
-                        </Link>
+                        <article>
+                            <Link
+                                className='news__list-list__item'
+                                key={item.id}
+                                href={`/news/${item.url}`}
+                                style={{
+                                    backgroundImage: `url(${item.imagePreview.src})`,
+                                }}
+                            >
+                                <h1 className='news__list-list__item-title'>
+                                    {item.title}
+                                </h1>
+                            </Link>
+                        </article>
                     ))}
                 </>
             ) : (
                 <>
                     {NewsData.map(item => (
-                        <Link
-                            className='news__list-list__item'
-                            key={item.id}
-                            href={`/news/${item.url}`}
-                        >
-                            <div
-                                className='news__list-list__item-image'
-                                style={{
-                                    backgroundImage: `url(${item.imagePreview.src})`,
-                                }}
-                            />
-                            <div className='news__list-list__item-title'>
-                                {item.title}
-                            </div>
-                        </Link>
+                        <article>
+                            <Link
+                                className='news__list-list__item'
+                                key={item.id}
+                                href={`/news/${item.url}`}
+                            >
+                                <div
+                                    className='news__list-list__item-image'
+                                    style={{
+                                        backgroundImage: `url(${item.imagePreview.src})`,
+                                    }}
+                                />
+                                <h1 className='news__list-list__item-title'>
+                                    {item.title}
+                                </h1>
+                            </Link>
+                        </article>
                     ))}
                 </>
             )}

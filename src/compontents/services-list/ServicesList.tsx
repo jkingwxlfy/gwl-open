@@ -4,15 +4,14 @@ import type { IService } from '@/models/IService'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import useIsMobile from '@/hooks/useIsMobile'
-import Link from 'next/link'
 import type { SingleValue } from 'react-select'
 import type { IOptionsSelect } from '../UI/select/MySelect'
 
 import { MySelect } from '../UI'
 
 import whiteArrowRight from '@/assets/whitearrowright.png'
-import greenArrowRight from '@/assets/green-arrow-right.png'
 import './serviceslist.scss'
+import { LinkButton } from '@/shared/ui'
 
 interface IServicesListProps {
     servicesData: IService[]
@@ -25,6 +24,7 @@ const ServicesList: React.FC<IServicesListProps> = ({
     listTitle,
     selectTitle,
 }) => {
+    const [isFaq, setIsFaq] = useState<boolean>(false)
     const [selectedService, setSelectedService] = useState<IService>(
         servicesData[0],
     )
@@ -38,6 +38,10 @@ const ServicesList: React.FC<IServicesListProps> = ({
             setSelectedService(foundService)
         }
     }
+
+    useEffect(() => {
+        setIsFaq(window.location.href.includes('faq'))
+    }, [])
 
     useEffect(() => {
         const foundService = servicesData.find(
@@ -102,13 +106,20 @@ const ServicesList: React.FC<IServicesListProps> = ({
                                 __html: selectedService.text,
                             }}
                         />
-                        <Link className='services-list-button' href='/contacts'>
-                            Связаться с нами{' '}
-                            <Image
-                                src={whiteArrowRight}
-                                alt='Изображение стрелки'
-                            />
-                        </Link>
+                        {!isFaq && (
+                            <LinkButton
+                                href='/contacts'
+                                type='green'
+                                mobileWidth={328}
+                                width={410}
+                            >
+                                Связаться с нами{' '}
+                                <Image
+                                    src={whiteArrowRight}
+                                    alt='Изображение стрелки'
+                                />
+                            </LinkButton>
+                        )}
                     </div>
                 </div>
             </div>

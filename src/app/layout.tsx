@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import Head from 'next/head'
 
-import Header from '@/compontents/header/Header'
+import { Header } from '@/widgets/Header'
 import Footer from '@/compontents/footer/Footer'
 import WhatsApp from '@/compontents/whatsapp/WhatsApp'
 

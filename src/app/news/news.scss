@@ -98,8 +98,10 @@
                     text-overflow: ellipsis;
                     line-height: 20px;
                     -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2; /* Обрезаем текст после двух строк */
+                    -webkit-line-clamp: 2;
                     white-space: normal;
+                    font-size: 16px;
+                    font-weight: 400;
                 }
 
                 &-image {

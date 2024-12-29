@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 
 import ContactsBorder from '@/compontents/contacts-border/ContactsBorder'
 import AboutOp from '@/compontents/(about)/about-op/AboutOp'
-import AboutExp from '@/compontents/(about)/about-exp/AboutExp'
 import AboutRecommend from '@/compontents/(about)/about-recommend/AboutRecommend'
-import Card from '@/compontents/card/Card'
+import Card from '@/shared/ui/Card/Card'
+import { HeroSectionSliderMobile } from '@/widgets/HeroSection'
 
 import aboutPromo from '@/assets/aboutpromo.png'
 import truck from '@/assets/redtruck.png'
@@ -16,6 +16,7 @@ import card3 from '@/assets/card3.png'
 import oppromo from '@/assets/oppromo.png'
 
 import './about.scss'
+import { AboutInfo } from '@/widgets/AboutInfo'
 
 export const metadata: Metadata = {
     title: 'GWL Group - О компании',
@@ -95,31 +96,52 @@ const AboutPage: React.FC = () => {
             >
                 <div className='about-page__cards__container'>
                     <div className='about-page__cards-list'>
-                        <Card
-                            image={card1}
-                            title='Экономия Времени'
-                            text='С нами быстрее и удобнее! Вы получите свой груз
-                                в кратчайшие сроки без проблем с таможней!'
-                        />
-                        <Card
-                            image={card2}
-                            title='Безопасность'
-                            text='С нами вы застрахованы от юридических притязаний
-                            таможенных органов!'
-                        />
-                        <Card
-                            image={card3}
-                            title='Экономия'
-                            text='Стоимость услуг таможенного представителя ниже,
-                            чем оклад штатного специалиста!'
-                        />
+                        <Card>
+                            <div className='card__image'>
+                                <Image
+                                    src={card1}
+                                    alt='Изображение логотипа карточки'
+                                />
+                            </div>
+                            <div className='card__title'>Экономия Времени</div>
+                            <div className='card__text'>
+                                С нами быстрее и удобнее! Вы получите свой груз
+                                в кратчайшие сроки без проблем с таможней!
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className='card__image'>
+                                <Image
+                                    src={card2}
+                                    alt='Изображение логотипа карточки'
+                                />
+                            </div>
+                            <div className='card__title'>Безопасность</div>
+                            <div className='card__text'>
+                                С нами вы застрахованы от юридических притязаний
+                                таможенных органов!
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className='card__image'>
+                                <Image
+                                    src={card3}
+                                    alt='Изображение логотипа карточки'
+                                />
+                            </div>
+                            <div className='card__title'>Экономия</div>
+                            <div className='card__text'>
+                                Стоимость услуг таможенного представителя ниже,
+                                чем оклад штатного специалиста!
+                            </div>
+                        </Card>
                     </div>
                 </div>
             </div>
 
             <div className='about-page__exp'>
                 <div className='about-page__exp__container'>
-                    <AboutExp />
+                    <AboutInfo />
                 </div>
             </div>
 

@@ -39,13 +39,13 @@ const Services: React.FC = () => {
                 style={{ backgroundImage: `url(${promo.src})` }}
             >
                 <div className='services__promo__container'>
-                    <div className='services__promo-wrapper'>
+                    <article className='services__promo-wrapper'>
                         <h1 className='services__promo-title'>Наши услуги</h1>
                         <h2 className='services__promo-description'>
                             Какие услуги мы можем предоставить для наших
                             клиентов?
                         </h2>
-                    </div>
+                    </article>
                 </div>
             </div>
             <ServicesList

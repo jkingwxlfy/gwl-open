@@ -1,0 +1,21 @@
+// Colors
+$colors: (
+    green-primary: #53c640,
+    green-secondary: #149100,
+    white-primary: #f5f5f5,
+    grey1: #858585,
+    black1: #232323,
+);
+
+// Tokens
+@function token($name) {
+    @return map-get($tokens, $name);
+}
+
+$tokens: (
+    grey: map-get($colors, grey1),
+    green-secondary: map-get($colors, green-secondary),
+    green-primary: map-get($colors, green-primary),
+    white-primary: map-get($colors, white-primary),
+    black: map-get($colors, black1),
+);

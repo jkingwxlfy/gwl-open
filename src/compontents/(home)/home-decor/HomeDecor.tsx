@@ -1,7 +1,8 @@
 'use client'
 import useIsMobile from '@/hooks/useIsMobile'
+
 import Image from 'next/image'
-import Link from 'next/link'
+import { LinkButton } from '@/shared/ui'
 
 import decor1 from '@/assets/decor1.png'
 import decor2 from '@/assets/decor2.png'
@@ -43,13 +44,13 @@ const HomeDecor: React.FC = () => {
                             Такому, как компания&nbsp;<p>“GWL Group”</p>
                         </span>
                     </div>
-                    <Link href='/contacts'>
+                    <LinkButton href='/contacts' type='green' mobileWidth={328}>
                         Связаться с нами{' '}
                         <Image
                             src={whiteArrowRight}
                             alt='Изображение стрелки'
                         />
-                    </Link>
+                    </LinkButton>
                 </div>
             ) : (
                 <>
@@ -73,13 +74,18 @@ const HomeDecor: React.FC = () => {
                                 <span>“GWL Group”</span>
                             </div>
                         </div>
-                        <Link href='/contacts'>
-                            Связаться с нами{' '}
+                        <LinkButton
+                            href='/contacts'
+                            type='green'
+                            mobileWidth={328}
+                            width={300}
+                        >
+                            Подробнее{' '}
                             <Image
                                 src={whiteArrowRight}
                                 alt='Изображение стрелки'
                             />
-                        </Link>
+                        </LinkButton>
                     </div>
                     <div className='app__decor-images'>
                         <Image

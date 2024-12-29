@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 522px;
+}
+
+@media (width <= 800px) {
+    .wrapper {
+        height: 100%;
+    }
+}

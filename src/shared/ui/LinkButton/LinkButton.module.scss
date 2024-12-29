@@ -1,0 +1,30 @@
+@use '@/styles/variables' as vars;
+
+.link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    padding: 8px 22px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    &.green {
+        background-color: vars.token(green-primary);
+        color: vars.token(white-primary);
+    }
+
+    &.white {
+        background-color: vars.token(white-primary);
+        color: vars.token(green-primary);
+    }
+}
+
+@media (width <= 800px) {
+    .link {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

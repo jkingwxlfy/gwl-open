@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-import NavLink from '../nav-link/NavLink'
+import NavLink from '../../../../compontents/nav-link/NavLink'
 
 import burderexit from '@/assets/burgerexit.png'
 import burger from '@/assets/burger.png'

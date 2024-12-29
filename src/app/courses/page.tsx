@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 import CoursesStaff from '@/compontents/(courses)/courses-staff/CoursesStaff'
 import CoursesInfo from '@/compontents/(courses)/courses-info/CoursesInfo'
-import Card from '@/compontents/card/Card'
+import { NewCourses } from '@/widgets/NewCourses'
+import Card from '@/shared/ui/Card/Card'
 
 import promo from '@/assets/coursespromo.png'
 import coursecardbg1 from '@/assets/coursecardbg1.png'
@@ -13,8 +15,10 @@ import coursecardphose from '@/assets/cardphone.png'
 import coursecardmedal from '@/assets/cardmedal.png'
 import coursecardspeed from '@/assets/cardspeed.png'
 import coursescardbg2 from '@/assets/coursescardbg2.png'
+import KurPorts from '@/shared/assets/KurPortsRectangle.png'
 
 import './courses.scss'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
     title: 'GWL Group - Курсы таможенного брокера',
@@ -56,6 +60,14 @@ const Courses: React.FC = () => {
                             <span>“GWL Group”</span>
                         </h2>
                     </div>
+                    <Link href='#newCourses'>
+                        <Card className='courses__promo-card'>
+                            <Image src={KurPorts} alt='' />
+                            <h1>
+                                Теперь мы знакомим с KEDEN на наших курсах !
+                            </h1>
+                        </Card>
+                    </Link>
                 </div>
             </div>
 
@@ -71,21 +83,43 @@ const Courses: React.FC = () => {
             >
                 <div className='courses__cards1__container'>
                     <div className='courses__cards1-wrapper'>
-                        <Card
-                            image={coursecard1}
-                            title='Повышение Квалификации'
-                            text='Любой юрист, брокер или же логистможет получить программу для повышения своей квалификации'
-                        />
-                        <Card
-                            image={coursecard2}
-                            title='Лучшие Преподаватели'
-                            text='С нами вы застрахованы от юридических притязаний таможенных органов!'
-                        />
-                        <Card
-                            image={coursecard3}
-                            title='Эффективное обучение'
-                            text='Мастерски обучим Вас главным тонкостям таможенного дела за короткий срок времени'
-                        />
+                        <Card>
+                            <div className='card__image'>
+                                <Image src={coursecard1} alt={''} />
+                            </div>
+                            <div className='card__title'>
+                                Повышение Квалификации
+                            </div>
+                            <div className='card__text'>
+                                Любой юрист, брокер или же логистможет получить
+                                программу для повышения своей квалификации
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className='card__image'>
+                                <Image src={coursecard2} alt={''} />
+                            </div>
+                            <div className='card__title'>
+                                Лучшие Преподаватели
+                            </div>
+                            <div className='card__text'>
+                                С нами вы застрахованы от юридических притязаний
+                                таможенных органов!
+                            </div>
+                        </Card>
+
+                        <Card>
+                            <div className='card__image'>
+                                <Image src={coursecard3} alt={''} />
+                            </div>
+                            <div className='card__title'>
+                                Эффективное обучение
+                            </div>
+                            <div className='card__text'>
+                                Мастерски обучим Вас главным тонкостям
+                                таможенного дела за короткий срок времени
+                            </div>
+                        </Card>
                     </div>
                 </div>
             </div>
@@ -195,25 +229,45 @@ const Courses: React.FC = () => {
             >
                 <div className='courses__cards1__container'>
                     <div className='courses__cards1-wrapper'>
-                        <Card
-                            image={coursecardphose}
-                            title='Бесплатные консультации'
-                            text='В течении месяца мы индвидуально консультируем каждого нашего выпускника по любым вопросам'
-                        />
-                        <Card
-                            image={coursecardmedal}
-                            title='Сертификат об окончании'
-                            text='По окончанию курса каждый выпускник получает уникальный сертификат'
-                        />
-                        <Card
-                            image={coursecardspeed}
-                            title='Короткий срок'
-                            text='Продолжительность курса -
-                            9 рабочих дней. Занятия проходят в рабочие дни с 17-00 до 20-00.'
-                        />
+                        <Card>
+                            <div className='card__image'>
+                                <Image src={coursecardphose} alt={''} />
+                            </div>
+                            <div className='card__title'>
+                                Бесплатные консультации
+                            </div>
+                            <div className='card__text'>
+                                В течении месяца мы индвидуально консультируем
+                                каждого нашего выпускника по любым вопросам
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className='card__image'>
+                                <Image src={coursecardmedal} alt={''} />
+                            </div>
+                            <div className='card__title'>
+                                Сертификат об окончании
+                            </div>
+                            <div className='card__text'>
+                                По окончанию курса каждый выпускник получает
+                                уникальный сертификат
+                            </div>
+                        </Card>
+                        <Card>
+                            <div className='card__image'>
+                                <Image src={coursecardspeed} alt={''} />
+                            </div>
+                            <div className='card__title'>Короткий срок</div>
+                            <div className='card__text'>
+                                Продолжительность курса - 9 рабочих дней.
+                                Занятия проходят в рабочие дни с 17-00 до 20-00.
+                            </div>
+                        </Card>
                     </div>
                 </div>
             </div>
+
+            <NewCourses />
 
             <div className='courses__staff'>
                 <div className='courses__staff__container'>
