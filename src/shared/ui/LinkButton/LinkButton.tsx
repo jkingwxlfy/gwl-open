@@ -11,6 +11,7 @@ interface Props {
     type: 'white' | 'green'
     width?: number
     mobileWidth?: number
+    height?: number
 }
 
 const LinkButton = ({
@@ -19,6 +20,7 @@ const LinkButton = ({
     type,
     width,
     mobileWidth,
+    height,
 }: Props): JSX.Element => {
     const isMobile = useIsMobile()
     const currentWidth =
@@ -28,7 +30,7 @@ const LinkButton = ({
         <Link
             className={cn(styles.link, styles[type])}
             href={href}
-            style={{ width: currentWidth }}
+            style={{ width: currentWidth, height: `${height}px` }}
         >
             {children}
         </Link>

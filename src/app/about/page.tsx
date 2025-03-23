@@ -5,7 +5,6 @@ import ContactsBorder from '@/compontents/contacts-border/ContactsBorder'
 import AboutOp from '@/compontents/(about)/about-op/AboutOp'
 import AboutRecommend from '@/compontents/(about)/about-recommend/AboutRecommend'
 import Card from '@/shared/ui/Card/Card'
-import { HeroSectionSliderMobile } from '@/widgets/HeroSection'
 
 import aboutPromo from '@/assets/aboutpromo.png'
 import truck from '@/assets/redtruck.png'

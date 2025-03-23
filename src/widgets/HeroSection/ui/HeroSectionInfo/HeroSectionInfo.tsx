@@ -28,6 +28,7 @@ const HeroSectionInfo: React.FC = () => {
                         type='white'
                         href='/contacts'
                         width={300}
+                        height={48}
                         mobileWidth={256}
                     >
                         Связаться с нами{' '}

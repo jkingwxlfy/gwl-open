@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import cn from 'classnames'
 import { slides } from '../../model/slides'
@@ -11,14 +11,15 @@ import { Card } from '@/shared/ui'
 import styles from './HeroSectionSlider.module.scss'
 
 const HeroSectionSlider: React.FC = () => {
-    const [activeSlider, setActiveSlider] = useState<number>(0)
-    const innerRef = useRef<HTMLDivElement | null>(null)
     const isMobile = useIsMobile()
-    const router = useRouter()
 
     if (isMobile) {
         return null
     }
+
+    const [activeSlider, setActiveSlider] = useState<number>(0)
+    const innerRef = useRef<HTMLDivElement | null>(null)
+    const router = useRouter()
 
     const handleNavClick = (index: number) => {
         setActiveSlider(index)
@@ -31,6 +32,27 @@ const HeroSectionSlider: React.FC = () => {
             })
         }
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (innerRef.current) {
+                const slideWidth = innerRef.current.clientWidth
+
+                setActiveSlider(prev => {
+                    const nextIndex = prev === slides.length - 1 ? 0 : prev + 1
+
+                    innerRef.current?.scrollTo({
+                        left: slideWidth * nextIndex,
+                        behavior: 'smooth',
+                    })
+
+                    return nextIndex
+                })
+            }
+        }, 3000)
+
+        return () => clearInterval(interval)
+    }, [])
 
     return (
         <section className={styles.slider}>

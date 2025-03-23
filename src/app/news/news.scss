@@ -222,7 +222,7 @@
 
                     &-title {
                         display: -webkit-box;
-                        z-index: 999;
+                        z-index: 9;
                         width: 320px;
                         max-height: 40px;
                         overflow: hidden;
@@ -233,7 +233,7 @@
                         font-size: 12px;
                         font-weight: 400;
                         -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2; /* Обрезаем текст после двух строк */
+                        -webkit-line-clamp: 2;
                     }
                 }
             }

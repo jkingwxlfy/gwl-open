@@ -1,0 +1,16 @@
+.outerWrapper {
+    width: 100%;
+    overflow-x: auto;
+    user-select: none;
+}
+
+.slider {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    > img {
+        cursor: pointer;
+        user-select: none;
+    }
+}
