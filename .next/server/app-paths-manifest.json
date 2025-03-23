@@ -1,0 +1,13 @@
+{
+  "/news/[name]/page": "app/news/[name]/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/faq/page": "app/faq/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/contacts/page": "app/contacts/page.js",
+  "/about/page": "app/about/page.js",
+  "/news/page": "app/news/page.js",
+  "/page": "app/page.js",
+  "/services/page": "app/services/page.js",
+  "/courses/page": "app/courses/page.js"
+}

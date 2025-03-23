@@ -14,7 +14,6 @@ Dockerfile
 
 # next.js
 /.next/types/
-/.next/server/
 /.next/cache/
 /out/
 
