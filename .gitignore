@@ -13,8 +13,6 @@ Dockerfile
 /coverage
 
 # next.js
-/.next/types/
-/.next/cache/
 /out/
 
 # production
