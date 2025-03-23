@@ -13,11 +13,12 @@ Dockerfile
 /coverage
 
 # next.js
-/.next/
+/.next/types/
+/.next/server/
+/.next/cache/
 /out/
 
 # production
-/build
 
 # misc
 .DS_Store
