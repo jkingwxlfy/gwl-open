@@ -1,0 +1,32 @@
+@import '@/shared/styles/variables';
+@import '@/shared/styles/get-color';
+
+.header {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+    background-color: transparent;
+    height: $header-height;
+
+    nav ul li {
+        padding: 10px;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: color(white-title);
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
